@@ -1,0 +1,13 @@
+<JavaCardProject name="Diem_danh_nv_LPH">
+<USER>
+<PKG name="LPH_diem_danh_nv" aid="25 10 19 99 00 00" major="1" minor="0">
+<APPLET aid="25 10 19 99 00 00 00" instanceaid="" parameter="" authority="" privileges="" index="-4880" name="LPH_diem_danh_nv"/>
+<APPLET aid="25 10 19 99 00 00 01" instanceaid="" parameter="" authority="" privileges="" index="-29952" name="DeselectApplet"/>
+<APPLET aid="25 10 19 99 00 00 03" instanceaid="" parameter="" authority="" privileges="" index="-27552" name="RSAApplet"/>
+</PKG>
+<Libs/>
+</USER>
+<DebugInfo>
+<Protocol name="T01"/>
+</DebugInfo>
+</JavaCardProject>
