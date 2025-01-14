@@ -1,5 +1,5 @@
 // converted by version 1.3
-// on Thu Jan 09 17:06:28 ICT 2025
+// on Tue Jan 14 20:13:57 ICT 2025
 
 .package LPH_diem_danh_nv {
 	.aid 0x25:0x10:0x19:0x99:0x0:0x0;
@@ -20,276 +20,280 @@
 
 	.constantPool {
 		// 0
-		instanceFieldRef boolean LPH_diem_danh_nv/setupDone;
+		instanceFieldRef short LPH_diem_danh_nv/imageLen;
 		// 1
-		instanceFieldRef 0.9 LPH_diem_danh_nv/pin;
+		instanceFieldRef short LPH_diem_danh_nv/pointerImage;
 		// 2
-		instanceFieldRef byte[] LPH_diem_danh_nv/tmpBuffer;
+		instanceFieldRef boolean LPH_diem_danh_nv/setupDone;
 		// 3
-		instanceFieldRef 3.1 LPH_diem_danh_nv/aesCipher;
+		instanceFieldRef 0.9 LPH_diem_danh_nv/pin;
 		// 4
-		instanceFieldRef 2.20 LPH_diem_danh_nv/aesKey;
+		instanceFieldRef byte[] LPH_diem_danh_nv/tmpBuffer;
 		// 5
-		instanceFieldRef short LPH_diem_danh_nv/logged_ids;
+		instanceFieldRef 3.1 LPH_diem_danh_nv/aesCipher;
 		// 6
-		instanceFieldRef short RSAApplet/sigLen;
+		instanceFieldRef 2.20 LPH_diem_danh_nv/aesKey;
 		// 7
-		instanceFieldRef 2.15 RSAApplet/rsaSig;
+		instanceFieldRef short LPH_diem_danh_nv/logged_ids;
 		// 8
-		instanceFieldRef 2.8 RSAApplet/rsaPrivKey;
+		instanceFieldRef short RSAApplet/sigLen;
 		// 9
-		instanceFieldRef 2.9 RSAApplet/rsaPubKey;
+		instanceFieldRef 2.15 RSAApplet/rsaSig;
 		// 10
-		staticMethodRef Sha512/resetUpdateDoFinal([BSS[BS)S;
+		instanceFieldRef 2.8 RSAApplet/rsaPrivKey;
 		// 11
-		staticMethodRef 0.3.0()V;		// javacard/framework/Applet.<init>()V
+		instanceFieldRef 2.9 RSAApplet/rsaPubKey;
 		// 12
-		staticFieldRef byte[] LPH_diem_danh_nv/PIN_INIT_VALUE;
-		// 13
-		staticMethodRef LPH_diem_danh_nv/CheckPINPolicy([BSB)Z;
-		// 14
-		staticFieldRef byte[] LPH_diem_danh_nv/OpImage;
-		// 15
-		staticFieldRef byte[] LPH_diem_danh_nv/size;
-		// 16
-		classRef 0.9;		// javacard/framework/OwnerPIN
-		// 17
-		staticMethodRef 0.9.0(BB)V;		// javacard/framework/OwnerPIN.<init>(BB)V
-		// 18
 		classRef DeselectApplet;
+		// 13
+		staticMethodRef DeselectApplet/<init>()V;
+		// 14
+		staticFieldRef byte[] LPH_diem_danh_nv/PIN_INIT_VALUE;
+		// 15
+		staticMethodRef LPH_diem_danh_nv/CheckPINPolicy([BSB)Z;
+		// 16
+		staticFieldRef byte[] LPH_diem_danh_nv/OpImage;
+		// 17
+		staticFieldRef byte[] LPH_diem_danh_nv/size;
+		// 18
+		classRef 0.9;		// javacard/framework/OwnerPIN
 		// 19
-		virtualMethodRef 0.9.8([BSB)V;		// update([BSB)V
+		staticMethodRef 0.9.0(BB)V;		// javacard/framework/OwnerPIN.<init>(BB)V
 		// 20
-		virtualMethodRef 0.3.1()V;		// register()V
+		virtualMethodRef 0.3.2([BSB)V;		// register([BSB)V
 		// 21
-		staticMethodRef LPH_diem_danh_nv/LogOut()V;
+		virtualMethodRef 0.9.8([BSB)V;		// update([BSB)V
 		// 22
-		classRef LPH_diem_danh_nv;
+		virtualMethodRef 0.3.1()V;		// register()V
 		// 23
-		staticMethodRef LPH_diem_danh_nv/<init>([BSB)V;
+		staticMethodRef LPH_diem_danh_nv/LogOut()V;
 		// 24
-		virtualMethodRef 0.3.3()Z;		// selectingApplet()Z
+		classRef LPH_diem_danh_nv;
 		// 25
+		staticMethodRef LPH_diem_danh_nv/<init>([BSB)V;
+		// 26
+		virtualMethodRef 0.3.3()Z;		// selectingApplet()Z
+		// 27
 		staticMethodRef LPH_diem_danh_nv/CheckFisrtUse(Ljavacard/framework/APDU;[B)V;
 			.descriptor	Ljavacard/framework/APDU;	0.10;
 
-		// 26
+		// 28
 		staticMethodRef LPH_diem_danh_nv/setup(Ljavacard/framework/APDU;[B)V;
 			.descriptor	Ljavacard/framework/APDU;	0.10;
 
-		// 27
+		// 29
 		staticMethodRef LPH_diem_danh_nv/CreatePIN(Ljavacard/framework/APDU;[B)V;
 			.descriptor	Ljavacard/framework/APDU;	0.10;
 
-		// 28
+		// 30
 		staticMethodRef LPH_diem_danh_nv/VerifyPIN(Ljavacard/framework/APDU;[B)V;
 			.descriptor	Ljavacard/framework/APDU;	0.10;
 
-		// 29
+		// 31
 		staticMethodRef LPH_diem_danh_nv/ChangePIN(Ljavacard/framework/APDU;[B)V;
 			.descriptor	Ljavacard/framework/APDU;	0.10;
 
-		// 30
+		// 32
 		staticMethodRef LPH_diem_danh_nv/UnblockPIN(Ljavacard/framework/APDU;[B)V;
 			.descriptor	Ljavacard/framework/APDU;	0.10;
 
-		// 31
+		// 33
 		staticMethodRef LPH_diem_danh_nv/CheckLogin(Ljavacard/framework/APDU;[B)V;
 			.descriptor	Ljavacard/framework/APDU;	0.10;
 
-		// 32
+		// 34
 		staticMethodRef LPH_diem_danh_nv/SetupInformation(Ljavacard/framework/APDU;[B)V;
 			.descriptor	Ljavacard/framework/APDU;	0.10;
 
-		// 33
+		// 35
 		staticMethodRef LPH_diem_danh_nv/OutputInformation(Ljavacard/framework/APDU;[B)V;
 			.descriptor	Ljavacard/framework/APDU;	0.10;
 
-		// 34
+		// 36
 		staticMethodRef LPH_diem_danh_nv/ChangeInformation(Ljavacard/framework/APDU;[B)V;
 			.descriptor	Ljavacard/framework/APDU;	0.10;
 
-		// 35
+		// 37
 		staticMethodRef LPH_diem_danh_nv/SetupImage(Ljavacard/framework/APDU;[B)V;
 			.descriptor	Ljavacard/framework/APDU;	0.10;
 
-		// 36
+		// 38
 		staticMethodRef LPH_diem_danh_nv/SetCount(Ljavacard/framework/APDU;[B)V;
 			.descriptor	Ljavacard/framework/APDU;	0.10;
 
-		// 37
+		// 39
 		staticMethodRef LPH_diem_danh_nv/OuputSize(Ljavacard/framework/APDU;[B)V;
 			.descriptor	Ljavacard/framework/APDU;	0.10;
 
-		// 38
+		// 40
 		staticMethodRef LPH_diem_danh_nv/OututImage(Ljavacard/framework/APDU;[B)V;
 			.descriptor	Ljavacard/framework/APDU;	0.10;
 
-		// 39
-		classRef 0.13;		// javacard/framework/SystemException
-		// 40
-		staticMethodRef 0.8.13(SB)[B;		// javacard/framework/JCSystem.makeTransientByteArray(SB)[B
 		// 41
-		staticMethodRef DeselectApplet/<init>()V;
+		classRef 0.13;		// javacard/framework/SystemException
 		// 42
+		staticMethodRef 0.8.13(SB)[B;		// javacard/framework/JCSystem.makeTransientByteArray(SB)[B
+		// 43
+		virtualMethodRef 0.3.3()Z;		// selectingApplet()Z
+		// 44
 		staticMethodRef 3.1.0(BZ)Ljavacardx/crypto/Cipher;;		// javacardx/crypto/Cipher.getInstance(BZ)Ljavacardx/crypto/Cipher;
 			.descriptor	Ljavacardx/crypto/Cipher;	3.1;
 
-		// 43
-		virtualMethodRef 0.3.2([BSB)V;		// register([BSB)V
-		// 44
+		// 45
+		virtualMethodRef 0.10.1()[B;		// getBuffer()[B
+		// 46
 		staticMethodRef 2.13.0(BSZ)Ljavacard/security/Key;;		// javacard/security/KeyBuilder.buildKey(BSZ)Ljavacard/security/Key;
 			.descriptor	Ljavacard/security/Key;	2.0;
 
-		// 45
-		classRef 2.20;		// javacard/security/AESKey
-		// 46
-		virtualMethodRef 0.3.3()Z;		// selectingApplet()Z
 		// 47
-		staticMethodRef Sha512/init()V;
+		classRef 2.20;		// javacard/security/AESKey
 		// 48
-		staticMethodRef HMacSHA512/init([B)V;
+		staticMethodRef 0.7.1(S)V;		// javacard/framework/ISOException.throwIt(S)V
 		// 49
-		staticFieldRef short LPH_diem_danh_nv/LENGTH_BLOCK_AES;
+		staticMethodRef Sha512/init()V;
 		// 50
-		staticMethodRef HMacSHA512/computeHmacSha512([BSS[BS)[B;
+		staticMethodRef HMacSHA512/init([B)V;
 		// 51
-		staticFieldRef byte[] LPH_diem_danh_nv/first_logged_ids;
+		staticFieldRef short LPH_diem_danh_nv/LENGTH_BLOCK_AES;
 		// 52
-		staticMethodRef 0.16.5(BB)S;		// javacard/framework/Util.makeShort(BB)S
+		staticMethodRef HMacSHA512/computeHmacSha512([BSS[BS)[B;
 		// 53
-		virtualMethodRef 0.10.6()S;		// setIncomingAndReceive()S
+		staticFieldRef byte[] LPH_diem_danh_nv/first_logged_ids;
 		// 54
-		virtualMethodRef 0.9.2()B;		// getTriesRemaining()B
+		staticMethodRef 0.16.5(BB)S;		// javacard/framework/Util.makeShort(BB)S
 		// 55
-		virtualMethodRef 0.9.1([BSB)Z;		// check([BSB)Z
+		virtualMethodRef 0.10.6()S;		// setIncomingAndReceive()S
 		// 56
-		virtualMethodRef 0.10.1()[B;		// getBuffer()[B
+		virtualMethodRef 0.9.2()B;		// getTriesRemaining()B
 		// 57
-		virtualMethodRef 0.9.6()V;		// resetAndUnblock()V
+		virtualMethodRef 0.9.1([BSB)Z;		// check([BSB)Z
 		// 58
-		staticFieldRef byte LPH_diem_danh_nv/lenData;
+		staticMethodRef 1.0.0()V;		// java/lang/Object.<init>()V
 		// 59
-		staticFieldRef byte[] LPH_diem_danh_nv/OpData;
+		virtualMethodRef 0.9.6()V;		// resetAndUnblock()V
 		// 60
-		staticMethodRef 0.16.2([BS[BSS)S;		// javacard/framework/Util.arrayCopyNonAtomic([BS[BSS)S
+		staticFieldRef byte LPH_diem_danh_nv/lenData;
 		// 61
-		staticFieldRef byte LPH_diem_danh_nv/lenID;
+		staticFieldRef byte[] LPH_diem_danh_nv/OpData;
 		// 62
-		staticMethodRef LPH_diem_danh_nv/encrypt([B)[B;
+		staticMethodRef 0.16.2([BS[BSS)S;		// javacard/framework/Util.arrayCopyNonAtomic([BS[BSS)S
 		// 63
-		staticFieldRef byte[] LPH_diem_danh_nv/OpID;
+		staticFieldRef byte LPH_diem_danh_nv/lenID;
 		// 64
-		staticFieldRef byte LPH_diem_danh_nv/lenNAME;
+		staticMethodRef LPH_diem_danh_nv/encrypt([B)[B;
 		// 65
-		staticFieldRef byte[] LPH_diem_danh_nv/OpNAME;
+		staticFieldRef byte[] LPH_diem_danh_nv/OpID;
 		// 66
-		staticFieldRef byte LPH_diem_danh_nv/lenDATE;
+		staticFieldRef byte LPH_diem_danh_nv/lenNAME;
 		// 67
-		staticFieldRef byte[] LPH_diem_danh_nv/OpDATE;
+		staticFieldRef byte[] LPH_diem_danh_nv/OpNAME;
 		// 68
-		staticFieldRef byte[] LPH_diem_danh_nv/OpPHONE;
+		staticFieldRef byte LPH_diem_danh_nv/lenDATE;
 		// 69
-		staticFieldRef byte LPH_diem_danh_nv/lenPHONE;
+		staticFieldRef byte[] LPH_diem_danh_nv/OpDATE;
 		// 70
-		virtualMethodRef 0.10.7()S;		// setOutgoing()S
+		staticFieldRef byte[] LPH_diem_danh_nv/OpPHONE;
 		// 71
-		virtualMethodRef 0.10.9(S)V;		// setOutgoingLength(S)V
+		staticFieldRef byte LPH_diem_danh_nv/lenPHONE;
 		// 72
-		staticMethodRef LPH_diem_danh_nv/decrypt([BB)[B;
+		virtualMethodRef 0.10.7()S;		// setOutgoing()S
 		// 73
-		staticMethodRef 0.16.1([BS[BSS)S;		// javacard/framework/Util.arrayCopy([BS[BSS)S
+		virtualMethodRef 0.10.9(S)V;		// setOutgoingLength(S)V
 		// 74
-		virtualMethodRef 0.10.4(SS)V;		// sendBytes(SS)V
+		staticMethodRef LPH_diem_danh_nv/decrypt([BB)[B;
 		// 75
-		virtualMethodRef 0.10.5([BSS)V;		// sendBytesLong([BSS)V
+		staticMethodRef 0.16.1([BS[BSS)S;		// javacard/framework/Util.arrayCopy([BS[BSS)S
 		// 76
-		virtualMethodRef 0.9.5()V;		// reset()V
+		virtualMethodRef 0.10.4(SS)V;		// sendBytes(SS)V
 		// 77
+		virtualMethodRef 0.10.5([BSS)V;		// sendBytesLong([BSS)V
+		// 78
+		virtualMethodRef 0.9.5()V;		// reset()V
+		// 79
 		virtualMethodRef 3.1.3(Ljavacard/security/Key;B)V;		// init(Ljavacard/security/Key;B)V
 			.descriptor	Ljavacard/security/Key;	2.0;
 
-		// 78
-		virtualMethodRef 3.1.1([BSS[BS)S;		// doFinal([BSS[BS)S
-		// 79
-		classRef RSAApplet;
 		// 80
-		staticMethodRef RSAApplet/<init>()V;
+		virtualMethodRef 3.1.1([BSS[BS)S;		// doFinal([BSS[BS)S
 		// 81
-		virtualMethodRef 0.3.2([BSB)V;		// register([BSB)V
+		classRef RSAApplet;
 		// 82
-		staticMethodRef 0.7.1(S)V;		// javacard/framework/ISOException.throwIt(S)V
+		staticMethodRef RSAApplet/<init>()V;
 		// 83
+		virtualMethodRef 0.3.2([BSB)V;		// register([BSB)V
+		// 84
+		staticFieldRef byte[] HMacSHA512/data;
+		// 85
 		staticMethodRef 2.15.0(BZ)Ljavacard/security/Signature;;		// javacard/security/Signature.getInstance(BZ)Ljavacard/security/Signature;
 			.descriptor	Ljavacard/security/Signature;	2.15;
 
-		// 84
-		staticMethodRef 1.0.0()V;		// java/lang/Object.<init>()V
-		// 85
-		classRef 2.8;		// javacard/security/RSAPrivateKey
 		// 86
-		staticFieldRef byte[] HMacSHA512/data;
-		// 87
-		classRef 2.9;		// javacard/security/RSAPublicKey
-		// 88
 		staticMethodRef 0.16.3([BSSB)S;		// javacard/framework/Util.arrayFillNonAtomic([BSSB)S
+		// 87
+		classRef 2.8;		// javacard/security/RSAPrivateKey
+		// 88
+		staticMethodRef Sha512/resetUpdateDoFinal([BSS[BS)S;
 		// 89
-		classRef 2.16;		// javacard/security/KeyPair
+		classRef 2.9;		// javacard/security/RSAPublicKey
 		// 90
-		staticMethodRef 2.16.0(BS)V;		// javacard/security/KeyPair.<init>(BS)V
+		staticMethodRef 0.3.0()V;		// javacard/framework/Applet.<init>()V
 		// 91
-		virtualMethodRef 2.16.1()V;		// genKeyPair()V
+		classRef 2.16;		// javacard/security/KeyPair
 		// 92
+		staticMethodRef 2.16.0(BS)V;		// javacard/security/KeyPair.<init>(BS)V
+		// 93
+		virtualMethodRef 2.16.1()V;		// genKeyPair()V
+		// 94
 		virtualMethodRef 2.16.2()Ljavacard/security/PrivateKey;;		// getPrivate()Ljavacard/security/PrivateKey;
 			.descriptor	Ljavacard/security/PrivateKey;	2.2;
 
-		// 93
+		// 95
 		virtualMethodRef 2.16.3()Ljavacard/security/PublicKey;;		// getPublic()Ljavacard/security/PublicKey;
 			.descriptor	Ljavacard/security/PublicKey;	2.3;
 
-		// 94
+		// 96
 		virtualMethodRef 0.3.3()Z;		// selectingApplet()Z
-		// 95
+		// 97
 		staticMethodRef RSAApplet/sendPublicModulus(Ljavacard/framework/APDU;)V;
 			.descriptor	Ljavacard/framework/APDU;	0.10;
 
-		// 96
+		// 98
 		staticMethodRef RSAApplet/sendPublicExponent(Ljavacard/framework/APDU;)V;
 			.descriptor	Ljavacard/framework/APDU;	0.10;
 
-		// 97
+		// 99
 		staticMethodRef RSAApplet/rsaSign(Ljavacard/framework/APDU;)V;
 			.descriptor	Ljavacard/framework/APDU;	0.10;
 
-		// 98
+		// 100
 		virtualMethodRef 0.10.8(SS)V;		// setOutgoingAndSend(SS)V
-		// 99
+		// 101
 		virtualMethodRef 2.15.3(Ljavacard/security/Key;B)V;		// init(Ljavacard/security/Key;B)V
 			.descriptor	Ljavacard/security/Key;	2.0;
 
-		// 100
-		virtualMethodRef 2.15.5([BSS[BS)S;		// sign([BSS[BS)S
-		// 101
-		staticMethodRef 0.8.15(SB)[S;		// javacard/framework/JCSystem.makeTransientShortArray(SB)[S
 		// 102
-		staticFieldRef short[] Sha512/w_short;
+		virtualMethodRef 2.15.5([BSS[BS)S;		// sign([BSS[BS)S
 		// 103
-		staticFieldRef short[] Sha512/h_short;
+		staticMethodRef 0.8.15(SB)[S;		// javacard/framework/JCSystem.makeTransientShortArray(SB)[S
 		// 104
-		staticFieldRef short[] Sha512/hashState;
+		staticFieldRef short[] Sha512/w_short;
 		// 105
-		staticFieldRef byte[] Sha512/buffer;
+		staticFieldRef short[] Sha512/h_short;
 		// 106
-		staticMethodRef 0.16.4([BS)S;		// javacard/framework/Util.getShort([BS)S
+		staticFieldRef short[] Sha512/hashState;
 		// 107
-		staticFieldRef short[] Sha512/K_SHORT;
+		staticFieldRef byte[] Sha512/buffer;
 		// 108
-		staticFieldRef short Sha512/bufferOff;
+		staticMethodRef 0.16.4([BS)S;		// javacard/framework/Util.getShort([BS)S
 		// 109
-		staticFieldRef short Sha512/bufferLeft;
+		staticFieldRef short[] Sha512/K_SHORT;
 		// 110
-		staticFieldRef short[] Sha512/H_INIT_SHORT;
+		staticFieldRef short Sha512/bufferOff;
 		// 111
+		staticFieldRef short Sha512/bufferLeft;
+		// 112
+		staticFieldRef short[] Sha512/H_INIT_SHORT;
+		// 113
 		staticMethodRef Sha512/CompressionFunction([SS[BS)V;
 	}
 
@@ -314,7 +318,7 @@
 			.locals 0;
 
 				L0:	aload_0;
-					invokespecial 11;		// javacard/framework/Applet.<init>()V
+					invokespecial 90;		// javacard/framework/Applet.<init>()V
 					return;
 		}
 
@@ -322,9 +326,9 @@
 			.stack 5;
 			.locals 0;
 
-				L0:	new 18;		// LPH_diem_danh_nv/DeselectApplet
+				L0:	new 12;		// LPH_diem_danh_nv/DeselectApplet
 					dup;
-					invokespecial 41;		// LPH_diem_danh_nv/DeselectApplet.<init>()V
+					invokespecial 13;		// LPH_diem_danh_nv/DeselectApplet.<init>()V
 					aload_0;
 					sload_1;
 					sconst_1;
@@ -332,7 +336,7 @@
 					aload_0;
 					sload_1;
 					baload;
-					invokevirtual 43;		// register([BSB)V
+					invokevirtual 20;		// register([BSB)V
 					return;
 		}
 
@@ -343,11 +347,11 @@
 			.descriptor	Ljavacard/framework/APDU;	0.10;
 
 				L0:	aload_0;
-					invokevirtual 46;		// selectingApplet()Z
+					invokevirtual 43;		// selectingApplet()Z
 					ifeq L2;
 				L1:	return;
 				L2:	aload_1;
-					invokevirtual 56;		// getBuffer()[B
+					invokevirtual 45;		// getBuffer()[B
 					astore_2;
 				L3:	aload_2;
 					sconst_1;
@@ -355,7 +359,7 @@
 					slookupswitch L5 1 0 L4;
 				L4:	goto L6;
 				L5:	sspush 27904;
-					invokestatic 82;		// javacard/framework/ISOException.throwIt(S)V
+					invokestatic 48;		// javacard/framework/ISOException.throwIt(S)V
 				L6:	return;
 		}
 
@@ -382,7 +386,7 @@
 			.locals 0;
 
 				L0:	aload_0;
-					invokespecial 84;		// java/lang/Object.<init>()V
+					invokespecial 58;		// java/lang/Object.<init>()V
 					return;
 		}
 
@@ -391,7 +395,7 @@
 			.locals 0;
 
 				L0:	aload_0;
-					putstatic_a 86;		// reference LPH_diem_danh_nv/HMacSHA512.data
+					putstatic_a 84;		// reference LPH_diem_danh_nv/HMacSHA512.data
 					return;
 		}
 
@@ -405,13 +409,13 @@
 				L1:	sload_2;
 					ifge L3;
 				L2:	sspush -25586;
-					invokestatic 82;		// javacard/framework/ISOException.throwIt(S)V
+					invokestatic 48;		// javacard/framework/ISOException.throwIt(S)V
 				L3:	sconst_0;
 					sstore 5;
 				L4:	sload 5;
 					sload_2;
 					if_scmpge L6;
-				L5:	getstatic_a 86;		// reference LPH_diem_danh_nv/HMacSHA512.data
+				L5:	getstatic_a 84;		// reference LPH_diem_danh_nv/HMacSHA512.data
 					sload 5;
 					aload_0;
 					sload_1;
@@ -423,27 +427,27 @@
 					bastore;
 					sinc 5 1;
 					goto L4;
-				L6:	getstatic_a 86;		// reference LPH_diem_danh_nv/HMacSHA512.data
+				L6:	getstatic_a 84;		// reference LPH_diem_danh_nv/HMacSHA512.data
 					sload_2;
 					sspush 128;
 					sload_2;
 					ssub;
 					bspush 54;
-					invokestatic 88;		// javacard/framework/Util.arrayFillNonAtomic([BSSB)S
+					invokestatic 86;		// javacard/framework/Util.arrayFillNonAtomic([BSSB)S
 					pop;
-					getstatic_a 86;		// reference LPH_diem_danh_nv/HMacSHA512.data
+					getstatic_a 84;		// reference LPH_diem_danh_nv/HMacSHA512.data
 					sconst_0;
 					sspush 128;
-					getstatic_a 86;		// reference LPH_diem_danh_nv/HMacSHA512.data
+					getstatic_a 84;		// reference LPH_diem_danh_nv/HMacSHA512.data
 					sspush 128;
-					invokestatic 10;		// LPH_diem_danh_nv/Sha512.resetUpdateDoFinal([BSS[BS)S
+					invokestatic 88;		// LPH_diem_danh_nv/Sha512.resetUpdateDoFinal([BSS[BS)S
 					pop;
 					sconst_0;
 					sstore 5;
 				L7:	sload 5;
 					sload_2;
 					if_scmpge L9;
-				L8:	getstatic_a 86;		// reference LPH_diem_danh_nv/HMacSHA512.data
+				L8:	getstatic_a 84;		// reference LPH_diem_danh_nv/HMacSHA512.data
 					sload 5;
 					aload_0;
 					sload_1;
@@ -455,20 +459,20 @@
 					bastore;
 					sinc 5 1;
 					goto L7;
-				L9:	getstatic_a 86;		// reference LPH_diem_danh_nv/HMacSHA512.data
+				L9:	getstatic_a 84;		// reference LPH_diem_danh_nv/HMacSHA512.data
 					sload_1;
 					sspush 128;
 					sload_2;
 					ssub;
 					bspush 92;
-					invokestatic 88;		// javacard/framework/Util.arrayFillNonAtomic([BSSB)S
+					invokestatic 86;		// javacard/framework/Util.arrayFillNonAtomic([BSSB)S
 					pop;
-					getstatic_a 86;		// reference LPH_diem_danh_nv/HMacSHA512.data
+					getstatic_a 84;		// reference LPH_diem_danh_nv/HMacSHA512.data
 					sconst_0;
 					sspush 128;
 					aload_3;
 					sload 4;
-					invokestatic 10;		// LPH_diem_danh_nv/Sha512.resetUpdateDoFinal([BSS[BS)S
+					invokestatic 88;		// LPH_diem_danh_nv/Sha512.resetUpdateDoFinal([BSS[BS)S
 					pop;
 					aload_3;
 					areturn;
@@ -488,12 +492,14 @@
 			private 3.1 aesCipher 6;		// Ljavacardx/crypto/Cipher;
 			private 2.20 aesKey 7;		// Ljavacard/security/AESKey;
 			private 2.16[] keyPairs 8;		// [Ljavacard/security/KeyPair;
-			private boolean setupDone 9;		// Z
-			private byte create_object_ACL 10;		// B
-			private byte create_key_ACL 11;		// B
-			private byte create_pin_ACL 12;		// B
-			private short logged_ids 13;		// S
-			private byte key_it 14;		// B
+			private short imageLen 9;		// S
+			private short pointerImage 10;		// S
+			private boolean setupDone 11;		// Z
+			private byte create_object_ACL 12;		// B
+			private byte create_key_ACL 13;		// B
+			private byte create_pin_ACL 14;		// B
+			private short logged_ids 15;		// S
+			private byte key_it 16;		// B
 			public static byte[] OpData 0 = {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};		// [B
 			public static byte lenData 1;		// B
 			public static byte[] OpID 2;		// [B
@@ -579,44 +585,50 @@
 			.locals 0;
 
 				L0:	aload_0;
-					invokespecial 11;		// javacard/framework/Applet.<init>()V
+					invokespecial 90;		// javacard/framework/Applet.<init>()V
 					aload_0;
 					sconst_0;
-					putfield_b 0;		// boolean LPH_diem_danh_nv/LPH_diem_danh_nv.setupDone
+					putfield_s 0;		// short LPH_diem_danh_nv/LPH_diem_danh_nv.imageLen
 					aload_0;
-					getstatic_a 12;		// reference LPH_diem_danh_nv/LPH_diem_danh_nv.PIN_INIT_VALUE
 					sconst_0;
-					getstatic_a 12;		// reference LPH_diem_danh_nv/LPH_diem_danh_nv.PIN_INIT_VALUE
+					putfield_s 1;		// short LPH_diem_danh_nv/LPH_diem_danh_nv.pointerImage
+					aload_0;
+					sconst_0;
+					putfield_b 2;		// boolean LPH_diem_danh_nv/LPH_diem_danh_nv.setupDone
+					aload_0;
+					getstatic_a 14;		// reference LPH_diem_danh_nv/LPH_diem_danh_nv.PIN_INIT_VALUE
+					sconst_0;
+					getstatic_a 14;		// reference LPH_diem_danh_nv/LPH_diem_danh_nv.PIN_INIT_VALUE
 					arraylength;
 					s2b;
-					invokespecial 13;		// LPH_diem_danh_nv/LPH_diem_danh_nv.CheckPINPolicy([BSB)Z
+					invokespecial 15;		// LPH_diem_danh_nv/LPH_diem_danh_nv.CheckPINPolicy([BSB)Z
 					ifne L2;
 				L1:	sspush -25345;
-					invokestatic 82;		// javacard/framework/ISOException.throwIt(S)V
+					invokestatic 48;		// javacard/framework/ISOException.throwIt(S)V
 				L2:	sspush 10000;
 					newarray 11;
-					putstatic_a 14;		// reference LPH_diem_danh_nv/LPH_diem_danh_nv.OpImage
+					putstatic_a 16;		// reference LPH_diem_danh_nv/LPH_diem_danh_nv.OpImage
 					bspush 7;
 					newarray 11;
-					putstatic_a 15;		// reference LPH_diem_danh_nv/LPH_diem_danh_nv.size
+					putstatic_a 17;		// reference LPH_diem_danh_nv/LPH_diem_danh_nv.size
 					aload_0;
-					new 16;		// javacard/framework/OwnerPIN
+					new 18;		// javacard/framework/OwnerPIN
 					dup;
 					sconst_3;
-					getstatic_a 12;		// reference LPH_diem_danh_nv/LPH_diem_danh_nv.PIN_INIT_VALUE
+					getstatic_a 14;		// reference LPH_diem_danh_nv/LPH_diem_danh_nv.PIN_INIT_VALUE
 					arraylength;
 					s2b;
-					invokespecial 17;		// javacard/framework/OwnerPIN.<init>(BB)V
-					putfield_a 1;		// reference LPH_diem_danh_nv/LPH_diem_danh_nv.pin
-					getfield_a_this 1;		// reference LPH_diem_danh_nv/LPH_diem_danh_nv.pin
-					getstatic_a 12;		// reference LPH_diem_danh_nv/LPH_diem_danh_nv.PIN_INIT_VALUE
+					invokespecial 19;		// javacard/framework/OwnerPIN.<init>(BB)V
+					putfield_a 3;		// reference LPH_diem_danh_nv/LPH_diem_danh_nv.pin
+					getfield_a_this 3;		// reference LPH_diem_danh_nv/LPH_diem_danh_nv.pin
+					getstatic_a 14;		// reference LPH_diem_danh_nv/LPH_diem_danh_nv.PIN_INIT_VALUE
 					sconst_0;
-					getstatic_a 12;		// reference LPH_diem_danh_nv/LPH_diem_danh_nv.PIN_INIT_VALUE
+					getstatic_a 14;		// reference LPH_diem_danh_nv/LPH_diem_danh_nv.PIN_INIT_VALUE
 					arraylength;
 					s2b;
-					invokevirtual 19;		// update([BSB)V
+					invokevirtual 21;		// update([BSB)V
 					aload_0;
-					invokevirtual 20;		// register()V
+					invokevirtual 22;		// register()V
 					return;
 		}
 
@@ -625,7 +637,7 @@
 			.locals 0;
 
 				L0:	aload_0;
-					invokespecial 21;		// LPH_diem_danh_nv/LPH_diem_danh_nv.LogOut()V
+					invokespecial 23;		// LPH_diem_danh_nv/LPH_diem_danh_nv.LogOut()V
 					sconst_1;
 					sreturn;
 		}
@@ -635,7 +647,7 @@
 			.locals 0;
 
 				L0:	aload_0;
-					invokespecial 21;		// LPH_diem_danh_nv/LPH_diem_danh_nv.LogOut()V
+					invokespecial 23;		// LPH_diem_danh_nv/LPH_diem_danh_nv.LogOut()V
 					return;
 		}
 
@@ -643,12 +655,12 @@
 			.stack 5;
 			.locals 1;
 
-				L0:	new 22;		// LPH_diem_danh_nv/LPH_diem_danh_nv
+				L0:	new 24;		// LPH_diem_danh_nv/LPH_diem_danh_nv
 					dup;
 					aload_0;
 					sload_1;
 					sload_2;
-					invokespecial 23;		// LPH_diem_danh_nv/LPH_diem_danh_nv.<init>([BSB)V
+					invokespecial 25;		// LPH_diem_danh_nv/LPH_diem_danh_nv.<init>([BSB)V
 					astore_3;
 				L1:	return;
 		}
@@ -660,17 +672,17 @@
 			.descriptor	Ljavacard/framework/APDU;	0.10;
 
 				L0:	aload_1;
-					invokevirtual 56;		// getBuffer()[B
+					invokevirtual 45;		// getBuffer()[B
 					astore_2;
 				L1:	aload_0;
-					invokevirtual 24;		// selectingApplet()Z
+					invokevirtual 26;		// selectingApplet()Z
 					ifeq L3;
 				L2:	aload_0;
 					aload_1;
 					aload_2;
-					invokespecial 25;		// LPH_diem_danh_nv/LPH_diem_danh_nv.CheckFisrtUse(Ljavacard/framework/APDU;[B)V
+					invokespecial 27;		// LPH_diem_danh_nv/LPH_diem_danh_nv.CheckFisrtUse(Ljavacard/framework/APDU;[B)V
 					sspush -28672;
-					invokestatic 82;		// javacard/framework/ISOException.throwIt(S)V
+					invokestatic 48;		// javacard/framework/ISOException.throwIt(S)V
 				L3:	aload_2;
 					sconst_0;
 					baload;
@@ -687,97 +699,97 @@
 					bspush -80;
 					if_scmpeq L8;
 				L7:	sspush 28160;
-					invokestatic 82;		// javacard/framework/ISOException.throwIt(S)V
+					invokestatic 48;		// javacard/framework/ISOException.throwIt(S)V
 				L8:	aload_2;
 					sconst_1;
 					baload;
 					sstore_3;
-				L9:	getfield_b_this 0;		// boolean LPH_diem_danh_nv/LPH_diem_danh_nv.setupDone
+				L9:	getfield_b_this 2;		// boolean LPH_diem_danh_nv/LPH_diem_danh_nv.setupDone
 					ifne L12;
 				L10:	sload_3;
 					bspush 42;
 					if_scmpeq L12;
 				L11:	sspush -25596;
-					invokestatic 82;		// javacard/framework/ISOException.throwIt(S)V
-				L12:	getfield_b_this 0;		// boolean LPH_diem_danh_nv/LPH_diem_danh_nv.setupDone
+					invokestatic 48;		// javacard/framework/ISOException.throwIt(S)V
+				L12:	getfield_b_this 2;		// boolean LPH_diem_danh_nv/LPH_diem_danh_nv.setupDone
 					ifeq L15;
 				L13:	sload_3;
 					bspush 42;
 					if_scmpne L15;
 				L14:	sspush 27904;
-					invokestatic 82;		// javacard/framework/ISOException.throwIt(S)V
+					invokestatic 48;		// javacard/framework/ISOException.throwIt(S)V
 				L15:	sload_3;
 					stableswitch L30 42 97 L16 L30 L30 L30 L30 L30 L30 L30 L30 L30 L30 L30 L30 L30 L30 L30 L30 L30 L30 L30 L30 L30 L17 L30 L18 L30 L19 L30 L20 L30 L30 L30 L30 L30 L30 L30 L30 L30 L23 L24 L25 L26 L27 L28 L29 L30 L30 L30 L30 L30 L30 L30 L30 L30 L22 L21;
 				L16:	aload_0;
 					aload_1;
 					aload_2;
-					invokespecial 26;		// LPH_diem_danh_nv/LPH_diem_danh_nv.setup(Ljavacard/framework/APDU;[B)V
+					invokespecial 28;		// LPH_diem_danh_nv/LPH_diem_danh_nv.setup(Ljavacard/framework/APDU;[B)V
 					goto L31;
 				L17:	aload_0;
 					aload_1;
 					aload_2;
-					invokespecial 27;		// LPH_diem_danh_nv/LPH_diem_danh_nv.CreatePIN(Ljavacard/framework/APDU;[B)V
+					invokespecial 29;		// LPH_diem_danh_nv/LPH_diem_danh_nv.CreatePIN(Ljavacard/framework/APDU;[B)V
 					goto L31;
 				L18:	aload_0;
 					aload_1;
 					aload_2;
-					invokespecial 28;		// LPH_diem_danh_nv/LPH_diem_danh_nv.VerifyPIN(Ljavacard/framework/APDU;[B)V
+					invokespecial 30;		// LPH_diem_danh_nv/LPH_diem_danh_nv.VerifyPIN(Ljavacard/framework/APDU;[B)V
 					goto L31;
 				L19:	aload_0;
 					aload_1;
 					aload_2;
-					invokespecial 29;		// LPH_diem_danh_nv/LPH_diem_danh_nv.ChangePIN(Ljavacard/framework/APDU;[B)V
+					invokespecial 31;		// LPH_diem_danh_nv/LPH_diem_danh_nv.ChangePIN(Ljavacard/framework/APDU;[B)V
 					goto L31;
 				L20:	aload_0;
 					aload_1;
 					aload_2;
-					invokespecial 30;		// LPH_diem_danh_nv/LPH_diem_danh_nv.UnblockPIN(Ljavacard/framework/APDU;[B)V
+					invokespecial 32;		// LPH_diem_danh_nv/LPH_diem_danh_nv.UnblockPIN(Ljavacard/framework/APDU;[B)V
 					goto L31;
 				L21:	aload_0;
 					aload_1;
 					aload_2;
-					invokespecial 31;		// LPH_diem_danh_nv/LPH_diem_danh_nv.CheckLogin(Ljavacard/framework/APDU;[B)V
+					invokespecial 33;		// LPH_diem_danh_nv/LPH_diem_danh_nv.CheckLogin(Ljavacard/framework/APDU;[B)V
 					goto L31;
 				L22:	aload_0;
-					invokespecial 21;		// LPH_diem_danh_nv/LPH_diem_danh_nv.LogOut()V
+					invokespecial 23;		// LPH_diem_danh_nv/LPH_diem_danh_nv.LogOut()V
 					goto L31;
 				L23:	aload_0;
 					aload_1;
 					aload_2;
-					invokespecial 32;		// LPH_diem_danh_nv/LPH_diem_danh_nv.SetupInformation(Ljavacard/framework/APDU;[B)V
+					invokespecial 34;		// LPH_diem_danh_nv/LPH_diem_danh_nv.SetupInformation(Ljavacard/framework/APDU;[B)V
 					goto L31;
 				L24:	aload_0;
 					aload_1;
 					aload_2;
-					invokespecial 33;		// LPH_diem_danh_nv/LPH_diem_danh_nv.OutputInformation(Ljavacard/framework/APDU;[B)V
+					invokespecial 35;		// LPH_diem_danh_nv/LPH_diem_danh_nv.OutputInformation(Ljavacard/framework/APDU;[B)V
 					goto L31;
 				L25:	aload_0;
 					aload_1;
 					aload_2;
-					invokespecial 34;		// LPH_diem_danh_nv/LPH_diem_danh_nv.ChangeInformation(Ljavacard/framework/APDU;[B)V
+					invokespecial 36;		// LPH_diem_danh_nv/LPH_diem_danh_nv.ChangeInformation(Ljavacard/framework/APDU;[B)V
 					goto L31;
 				L26:	aload_0;
 					aload_1;
 					aload_2;
-					invokespecial 35;		// LPH_diem_danh_nv/LPH_diem_danh_nv.SetupImage(Ljavacard/framework/APDU;[B)V
+					invokespecial 37;		// LPH_diem_danh_nv/LPH_diem_danh_nv.SetupImage(Ljavacard/framework/APDU;[B)V
 					goto L31;
 				L27:	aload_0;
 					aload_1;
 					aload_2;
-					invokespecial 36;		// LPH_diem_danh_nv/LPH_diem_danh_nv.SetCount(Ljavacard/framework/APDU;[B)V
+					invokespecial 38;		// LPH_diem_danh_nv/LPH_diem_danh_nv.SetCount(Ljavacard/framework/APDU;[B)V
 					goto L31;
 				L28:	aload_0;
 					aload_1;
 					aload_2;
-					invokespecial 37;		// LPH_diem_danh_nv/LPH_diem_danh_nv.OuputSize(Ljavacard/framework/APDU;[B)V
+					invokespecial 39;		// LPH_diem_danh_nv/LPH_diem_danh_nv.OuputSize(Ljavacard/framework/APDU;[B)V
 					goto L31;
 				L29:	aload_0;
 					aload_1;
 					aload_2;
-					invokespecial 38;		// LPH_diem_danh_nv/LPH_diem_danh_nv.OututImage(Ljavacard/framework/APDU;[B)V
+					invokespecial 40;		// LPH_diem_danh_nv/LPH_diem_danh_nv.OututImage(Ljavacard/framework/APDU;[B)V
 					goto L31;
 				L30:	sspush 27904;
-					invokestatic 82;		// javacard/framework/ISOException.throwIt(S)V
+					invokestatic 48;		// javacard/framework/ISOException.throwIt(S)V
 				L31:	return;
 		}
 
@@ -790,72 +802,72 @@
 				L0:	aload_0;
 					sspush 256;
 					sconst_2;
-					invokestatic 40;		// javacard/framework/JCSystem.makeTransientByteArray(SB)[B
-					putfield_a 2;		// reference LPH_diem_danh_nv/LPH_diem_danh_nv.tmpBuffer
+					invokestatic 42;		// javacard/framework/JCSystem.makeTransientByteArray(SB)[B
+					putfield_a 4;		// reference LPH_diem_danh_nv/LPH_diem_danh_nv.tmpBuffer
 				L1:	goto L4;
 				L2:	astore_3;
 				L3:	aload_0;
 					sspush 256;
 					newarray 11;
-					putfield_a 2;		// reference LPH_diem_danh_nv/LPH_diem_danh_nv.tmpBuffer
+					putfield_a 4;		// reference LPH_diem_danh_nv/LPH_diem_danh_nv.tmpBuffer
 				L4:	aload_0;
 					bspush 13;
 					sconst_0;
-					invokestatic 42;		// javacardx/crypto/Cipher.getInstance(BZ)Ljavacardx/crypto/Cipher;
-					putfield_a 3;		// reference LPH_diem_danh_nv/LPH_diem_danh_nv.aesCipher
+					invokestatic 44;		// javacardx/crypto/Cipher.getInstance(BZ)Ljavacardx/crypto/Cipher;
+					putfield_a 5;		// reference LPH_diem_danh_nv/LPH_diem_danh_nv.aesCipher
 					aload_0;
 					bspush 15;
 					sspush 128;
 					sconst_0;
-					invokestatic 44;		// javacard/security/KeyBuilder.buildKey(BSZ)Ljavacard/security/Key;
-					checkcast 0 45;		// T_CLASSORINTERFACE javacard/security/AESKey
-					putfield_a 4;		// reference LPH_diem_danh_nv/LPH_diem_danh_nv.aesKey
-					invokestatic 47;		// LPH_diem_danh_nv/Sha512.init()V
-					getfield_a_this 2;		// reference LPH_diem_danh_nv/LPH_diem_danh_nv.tmpBuffer
-					invokestatic 48;		// LPH_diem_danh_nv/HMacSHA512.init([B)V
-					getstatic_s 49;		// short LPH_diem_danh_nv/LPH_diem_danh_nv.LENGTH_BLOCK_AES
+					invokestatic 46;		// javacard/security/KeyBuilder.buildKey(BSZ)Ljavacard/security/Key;
+					checkcast 0 47;		// T_CLASSORINTERFACE javacard/security/AESKey
+					putfield_a 6;		// reference LPH_diem_danh_nv/LPH_diem_danh_nv.aesKey
+					invokestatic 49;		// LPH_diem_danh_nv/Sha512.init()V
+					getfield_a_this 4;		// reference LPH_diem_danh_nv/LPH_diem_danh_nv.tmpBuffer
+					invokestatic 50;		// LPH_diem_danh_nv/HMacSHA512.init([B)V
+					getstatic_s 51;		// short LPH_diem_danh_nv/LPH_diem_danh_nv.LENGTH_BLOCK_AES
 					sconst_2;
-					invokestatic 40;		// javacard/framework/JCSystem.makeTransientByteArray(SB)[B
+					invokestatic 42;		// javacard/framework/JCSystem.makeTransientByteArray(SB)[B
 					astore_3;
-				L5:	getstatic_a 12;		// reference LPH_diem_danh_nv/LPH_diem_danh_nv.PIN_INIT_VALUE
+				L5:	getstatic_a 14;		// reference LPH_diem_danh_nv/LPH_diem_danh_nv.PIN_INIT_VALUE
 					sconst_0;
-					getstatic_a 12;		// reference LPH_diem_danh_nv/LPH_diem_danh_nv.PIN_INIT_VALUE
+					getstatic_a 14;		// reference LPH_diem_danh_nv/LPH_diem_danh_nv.PIN_INIT_VALUE
 					arraylength;
 					aload_3;
 					sconst_0;
-					invokestatic 50;		// LPH_diem_danh_nv/HMacSHA512.computeHmacSha512([BSS[BS)[B
+					invokestatic 52;		// LPH_diem_danh_nv/HMacSHA512.computeHmacSha512([BSS[BS)[B
 					pop;
-					getfield_a_this 4;		// reference LPH_diem_danh_nv/LPH_diem_danh_nv.aesKey
+					getfield_a_this 6;		// reference LPH_diem_danh_nv/LPH_diem_danh_nv.aesKey
 					aload_3;
 					sconst_0;
-					invokeinterface 3 45 4;		// javacard/security/AESKey
+					invokeinterface 3 47 4;		// javacard/security/AESKey
 				L6:	aload_3;
 					sconst_0;
-					getstatic_s 49;		// short LPH_diem_danh_nv/LPH_diem_danh_nv.LENGTH_BLOCK_AES
+					getstatic_s 51;		// short LPH_diem_danh_nv/LPH_diem_danh_nv.LENGTH_BLOCK_AES
 					sconst_0;
-					invokestatic 88;		// javacard/framework/Util.arrayFillNonAtomic([BSSB)S
+					invokestatic 86;		// javacard/framework/Util.arrayFillNonAtomic([BSSB)S
 					pop;
 					goto L9;
 				L7:	astore 4;
 				L8:	aload_3;
 					sconst_0;
-					getstatic_s 49;		// short LPH_diem_danh_nv/LPH_diem_danh_nv.LENGTH_BLOCK_AES
+					getstatic_s 51;		// short LPH_diem_danh_nv/LPH_diem_danh_nv.LENGTH_BLOCK_AES
 					sconst_0;
-					invokestatic 88;		// javacard/framework/Util.arrayFillNonAtomic([BSSB)S
+					invokestatic 86;		// javacard/framework/Util.arrayFillNonAtomic([BSSB)S
 					pop;
 					aload 4;
 					athrow;
-				L9:	getstatic_a 51;		// reference LPH_diem_danh_nv/LPH_diem_danh_nv.first_logged_ids
+				L9:	getstatic_a 53;		// reference LPH_diem_danh_nv/LPH_diem_danh_nv.first_logged_ids
 					sconst_0;
 					sconst_0;
 					bastore;
 					aload_0;
 					sconst_1;
-					putfield_b 0;		// boolean LPH_diem_danh_nv/LPH_diem_danh_nv.setupDone
+					putfield_b 2;		// boolean LPH_diem_danh_nv/LPH_diem_danh_nv.setupDone
 					return;
 			.exceptionTable {
 				// start_block end_block handler_block catch_type_index
-				L0 L1 L2 39;
+				L0 L1 L2 41;
 				L5 L6 L7 0;
 				L7 L8 L7 0;
 			}
@@ -875,19 +887,19 @@
 					aload_2;
 					sconst_4;
 					baload;
-					invokestatic 52;		// javacard/framework/Util.makeShort(BB)S
+					invokestatic 54;		// javacard/framework/Util.makeShort(BB)S
 					sstore 4;
 				L2:	aload_1;
-					invokevirtual 53;		// setIncomingAndReceive()S
+					invokevirtual 55;		// setIncomingAndReceive()S
 					sload 4;
 					if_scmpeq L4;
 				L3:	sspush 26368;
-					invokestatic 82;		// javacard/framework/ISOException.throwIt(S)V
+					invokestatic 48;		// javacard/framework/ISOException.throwIt(S)V
 				L4:	sload 4;
 					sconst_2;
 					if_scmpge L6;
 				L5:	sspush -25585;
-					invokestatic 82;		// javacard/framework/ISOException.throwIt(S)V
+					invokestatic 48;		// javacard/framework/ISOException.throwIt(S)V
 				L6:	aload_2;
 					sconst_5;
 					baload;
@@ -898,27 +910,27 @@
 					sadd;
 					if_scmpge L9;
 				L8:	sspush -25585;
-					invokestatic 82;		// javacard/framework/ISOException.throwIt(S)V
+					invokestatic 48;		// javacard/framework/ISOException.throwIt(S)V
 				L9:	aload_0;
 					aload_2;
 					bspush 6;
 					sload 5;
-					invokespecial 13;		// LPH_diem_danh_nv/LPH_diem_danh_nv.CheckPINPolicy([BSB)Z
+					invokespecial 15;		// LPH_diem_danh_nv/LPH_diem_danh_nv.CheckPINPolicy([BSB)Z
 					ifne L11;
 				L10:	sspush -25585;
-					invokestatic 82;		// javacard/framework/ISOException.throwIt(S)V
+					invokestatic 48;		// javacard/framework/ISOException.throwIt(S)V
 				L11:	aload_0;
-					new 16;		// javacard/framework/OwnerPIN
+					new 18;		// javacard/framework/OwnerPIN
 					dup;
 					sload_3;
 					bspush 16;
-					invokespecial 17;		// javacard/framework/OwnerPIN.<init>(BB)V
-					putfield_a 1;		// reference LPH_diem_danh_nv/LPH_diem_danh_nv.pin
-					getfield_a_this 1;		// reference LPH_diem_danh_nv/LPH_diem_danh_nv.pin
+					invokespecial 19;		// javacard/framework/OwnerPIN.<init>(BB)V
+					putfield_a 3;		// reference LPH_diem_danh_nv/LPH_diem_danh_nv.pin
+					getfield_a_this 3;		// reference LPH_diem_danh_nv/LPH_diem_danh_nv.pin
 					aload_2;
 					bspush 6;
 					sload 5;
-					invokevirtual 19;		// update([BSB)V
+					invokevirtual 21;		// update([BSB)V
 					return;
 		}
 
@@ -928,56 +940,56 @@
 
 			.descriptor	Ljavacard/framework/APDU;	0.10;
 
-				L0:	getfield_a_this 1;		// reference LPH_diem_danh_nv/LPH_diem_danh_nv.pin
+				L0:	getfield_a_this 3;		// reference LPH_diem_danh_nv/LPH_diem_danh_nv.pin
 					ifnonnull L2;
 				L1:	sspush -25584;
-					invokestatic 82;		// javacard/framework/ISOException.throwIt(S)V
+					invokestatic 48;		// javacard/framework/ISOException.throwIt(S)V
 				L2:	aload_2;
 					sconst_3;
 					baload;
 					ifeq L4;
 				L3:	sspush -25583;
-					invokestatic 82;		// javacard/framework/ISOException.throwIt(S)V
+					invokestatic 48;		// javacard/framework/ISOException.throwIt(S)V
 				L4:	sconst_0;
 					aload_2;
 					sconst_4;
 					baload;
-					invokestatic 52;		// javacard/framework/Util.makeShort(BB)S
+					invokestatic 54;		// javacard/framework/Util.makeShort(BB)S
 					sstore_3;
 				L5:	sload_3;
 					aload_1;
-					invokevirtual 53;		// setIncomingAndReceive()S
+					invokevirtual 55;		// setIncomingAndReceive()S
 					if_scmpeq L7;
 				L6:	sspush 26368;
-					invokestatic 82;		// javacard/framework/ISOException.throwIt(S)V
+					invokestatic 48;		// javacard/framework/ISOException.throwIt(S)V
 				L7:	aload_0;
 					aload_2;
 					sconst_5;
 					sload_3;
 					s2b;
-					invokespecial 13;		// LPH_diem_danh_nv/LPH_diem_danh_nv.CheckPINPolicy([BSB)Z
+					invokespecial 15;		// LPH_diem_danh_nv/LPH_diem_danh_nv.CheckPINPolicy([BSB)Z
 					ifne L9;
 				L8:	sspush -25585;
-					invokestatic 82;		// javacard/framework/ISOException.throwIt(S)V
-				L9:	getfield_a_this 1;		// reference LPH_diem_danh_nv/LPH_diem_danh_nv.pin
-					invokevirtual 54;		// getTriesRemaining()B
+					invokestatic 48;		// javacard/framework/ISOException.throwIt(S)V
+				L9:	getfield_a_this 3;		// reference LPH_diem_danh_nv/LPH_diem_danh_nv.pin
+					invokevirtual 56;		// getTriesRemaining()B
 					ifne L11;
 				L10:	sspush -25588;
-					invokestatic 82;		// javacard/framework/ISOException.throwIt(S)V
-				L11:	getfield_a_this 1;		// reference LPH_diem_danh_nv/LPH_diem_danh_nv.pin
+					invokestatic 48;		// javacard/framework/ISOException.throwIt(S)V
+				L11:	getfield_a_this 3;		// reference LPH_diem_danh_nv/LPH_diem_danh_nv.pin
 					aload_2;
 					sconst_5;
 					sload_3;
 					s2b;
-					invokevirtual 55;		// check([BSB)Z
+					invokevirtual 57;		// check([BSB)Z
 					ifne L13;
 				L12:	aload_0;
-					invokespecial 21;		// LPH_diem_danh_nv/LPH_diem_danh_nv.LogOut()V
+					invokespecial 23;		// LPH_diem_danh_nv/LPH_diem_danh_nv.LogOut()V
 					sspush -25598;
-					invokestatic 82;		// javacard/framework/ISOException.throwIt(S)V
+					invokestatic 48;		// javacard/framework/ISOException.throwIt(S)V
 				L13:	aload_0;
 					bspush 16;
-					putfield_s 5;		// short LPH_diem_danh_nv/LPH_diem_danh_nv.logged_ids
+					putfield_s 7;		// short LPH_diem_danh_nv/LPH_diem_danh_nv.logged_ids
 					return;
 		}
 
@@ -987,33 +999,33 @@
 
 			.descriptor	Ljavacard/framework/APDU;	0.10;
 
-				L0:	getfield_a_this 1;		// reference LPH_diem_danh_nv/LPH_diem_danh_nv.pin
+				L0:	getfield_a_this 3;		// reference LPH_diem_danh_nv/LPH_diem_danh_nv.pin
 					ifnonnull L2;
 				L1:	sspush -25584;
-					invokestatic 82;		// javacard/framework/ISOException.throwIt(S)V
+					invokestatic 48;		// javacard/framework/ISOException.throwIt(S)V
 				L2:	aload_2;
 					sconst_3;
 					baload;
 					ifeq L4;
 				L3:	sspush -25583;
-					invokestatic 82;		// javacard/framework/ISOException.throwIt(S)V
+					invokestatic 48;		// javacard/framework/ISOException.throwIt(S)V
 				L4:	sconst_0;
 					aload_2;
 					sconst_4;
 					baload;
-					invokestatic 52;		// javacard/framework/Util.makeShort(BB)S
+					invokestatic 54;		// javacard/framework/Util.makeShort(BB)S
 					sstore_3;
 				L5:	aload_1;
-					invokevirtual 53;		// setIncomingAndReceive()S
+					invokevirtual 55;		// setIncomingAndReceive()S
 					sload_3;
 					if_scmpeq L7;
 				L6:	sspush 26368;
-					invokestatic 82;		// javacard/framework/ISOException.throwIt(S)V
+					invokestatic 48;		// javacard/framework/ISOException.throwIt(S)V
 				L7:	sload_3;
 					sconst_4;
 					if_scmpge L9;
 				L8:	sspush -25585;
-					invokestatic 82;		// javacard/framework/ISOException.throwIt(S)V
+					invokestatic 48;		// javacard/framework/ISOException.throwIt(S)V
 				L9:	aload_2;
 					sconst_5;
 					baload;
@@ -1024,15 +1036,15 @@
 					sadd;
 					if_scmpge L12;
 				L11:	sspush -25585;
-					invokestatic 82;		// javacard/framework/ISOException.throwIt(S)V
+					invokestatic 48;		// javacard/framework/ISOException.throwIt(S)V
 				L12:	aload_0;
 					aload_2;
 					bspush 6;
 					sload 4;
-					invokespecial 13;		// LPH_diem_danh_nv/LPH_diem_danh_nv.CheckPINPolicy([BSB)Z
+					invokespecial 15;		// LPH_diem_danh_nv/LPH_diem_danh_nv.CheckPINPolicy([BSB)Z
 					ifne L14;
 				L13:	sspush -25585;
-					invokestatic 82;		// javacard/framework/ISOException.throwIt(S)V
+					invokestatic 48;		// javacard/framework/ISOException.throwIt(S)V
 				L14:	aload_2;
 					bspush 6;
 					sload 4;
@@ -1047,7 +1059,7 @@
 					sadd;
 					if_scmpge L17;
 				L16:	sspush -25585;
-					invokestatic 82;		// javacard/framework/ISOException.throwIt(S)V
+					invokestatic 48;		// javacard/framework/ISOException.throwIt(S)V
 				L17:	aload_0;
 					aload_2;
 					bspush 6;
@@ -1056,26 +1068,26 @@
 					sconst_1;
 					sadd;
 					sload 5;
-					invokespecial 13;		// LPH_diem_danh_nv/LPH_diem_danh_nv.CheckPINPolicy([BSB)Z
+					invokespecial 15;		// LPH_diem_danh_nv/LPH_diem_danh_nv.CheckPINPolicy([BSB)Z
 					ifne L19;
 				L18:	sspush -25585;
-					invokestatic 82;		// javacard/framework/ISOException.throwIt(S)V
-				L19:	getfield_a_this 1;		// reference LPH_diem_danh_nv/LPH_diem_danh_nv.pin
-					invokevirtual 54;		// getTriesRemaining()B
+					invokestatic 48;		// javacard/framework/ISOException.throwIt(S)V
+				L19:	getfield_a_this 3;		// reference LPH_diem_danh_nv/LPH_diem_danh_nv.pin
+					invokevirtual 56;		// getTriesRemaining()B
 					ifne L21;
 				L20:	sspush -25588;
-					invokestatic 82;		// javacard/framework/ISOException.throwIt(S)V
-				L21:	getfield_a_this 1;		// reference LPH_diem_danh_nv/LPH_diem_danh_nv.pin
+					invokestatic 48;		// javacard/framework/ISOException.throwIt(S)V
+				L21:	getfield_a_this 3;		// reference LPH_diem_danh_nv/LPH_diem_danh_nv.pin
 					aload_2;
 					bspush 6;
 					sload 4;
-					invokevirtual 55;		// check([BSB)Z
+					invokevirtual 57;		// check([BSB)Z
 					ifne L23;
 				L22:	aload_0;
-					invokespecial 21;		// LPH_diem_danh_nv/LPH_diem_danh_nv.LogOut()V
+					invokespecial 23;		// LPH_diem_danh_nv/LPH_diem_danh_nv.LogOut()V
 					sspush -25598;
-					invokestatic 82;		// javacard/framework/ISOException.throwIt(S)V
-				L23:	getfield_a_this 1;		// reference LPH_diem_danh_nv/LPH_diem_danh_nv.pin
+					invokestatic 48;		// javacard/framework/ISOException.throwIt(S)V
+				L23:	getfield_a_this 3;		// reference LPH_diem_danh_nv/LPH_diem_danh_nv.pin
 					aload_2;
 					bspush 6;
 					sload 4;
@@ -1083,10 +1095,10 @@
 					sconst_1;
 					sadd;
 					sload 5;
-					invokevirtual 19;		// update([BSB)V
+					invokevirtual 21;		// update([BSB)V
 					aload_0;
 					bspush 16;
-					putfield_s 5;		// short LPH_diem_danh_nv/LPH_diem_danh_nv.logged_ids
+					putfield_s 7;		// short LPH_diem_danh_nv/LPH_diem_danh_nv.logged_ids
 					return;
 		}
 
@@ -1096,35 +1108,35 @@
 
 			.descriptor	Ljavacard/framework/APDU;	0.10;
 
-				L0:	getfield_a_this 1;		// reference LPH_diem_danh_nv/LPH_diem_danh_nv.pin
+				L0:	getfield_a_this 3;		// reference LPH_diem_danh_nv/LPH_diem_danh_nv.pin
 					ifnonnull L2;
 				L1:	sspush -25584;
-					invokestatic 82;		// javacard/framework/ISOException.throwIt(S)V
-				L2:	getfield_a_this 1;		// reference LPH_diem_danh_nv/LPH_diem_danh_nv.pin
-					invokevirtual 54;		// getTriesRemaining()B
+					invokestatic 48;		// javacard/framework/ISOException.throwIt(S)V
+				L2:	getfield_a_this 3;		// reference LPH_diem_danh_nv/LPH_diem_danh_nv.pin
+					invokevirtual 56;		// getTriesRemaining()B
 					ifeq L4;
 				L3:	sspush -25597;
-					invokestatic 82;		// javacard/framework/ISOException.throwIt(S)V
+					invokestatic 48;		// javacard/framework/ISOException.throwIt(S)V
 				L4:	aload_2;
 					sconst_3;
 					baload;
 					ifeq L6;
 				L5:	sspush -25583;
-					invokestatic 82;		// javacard/framework/ISOException.throwIt(S)V
+					invokestatic 48;		// javacard/framework/ISOException.throwIt(S)V
 				L6:	sconst_0;
 					aload_2;
 					sconst_4;
 					baload;
-					invokestatic 52;		// javacard/framework/Util.makeShort(BB)S
+					invokestatic 54;		// javacard/framework/Util.makeShort(BB)S
 					sstore_3;
 				L7:	sload_3;
 					aload_1;
-					invokevirtual 53;		// setIncomingAndReceive()S
+					invokevirtual 55;		// setIncomingAndReceive()S
 					if_scmpeq L9;
 				L8:	sspush 26368;
-					invokestatic 82;		// javacard/framework/ISOException.throwIt(S)V
-				L9:	getfield_a_this 1;		// reference LPH_diem_danh_nv/LPH_diem_danh_nv.pin
-					invokevirtual 57;		// resetAndUnblock()V
+					invokestatic 48;		// javacard/framework/ISOException.throwIt(S)V
+				L9:	getfield_a_this 3;		// reference LPH_diem_danh_nv/LPH_diem_danh_nv.pin
+					invokevirtual 59;		// resetAndUnblock()V
 					return;
 		}
 
@@ -1137,25 +1149,25 @@
 				L0:	aload_0;
 					aload_1;
 					aload_2;
-					invokespecial 34;		// LPH_diem_danh_nv/LPH_diem_danh_nv.ChangeInformation(Ljavacard/framework/APDU;[B)V
+					invokespecial 36;		// LPH_diem_danh_nv/LPH_diem_danh_nv.ChangeInformation(Ljavacard/framework/APDU;[B)V
 					aload_1;
-					invokevirtual 53;		// setIncomingAndReceive()S
+					invokevirtual 55;		// setIncomingAndReceive()S
 					pop;
 					aload_2;
 					sconst_4;
 					baload;
-					putstatic_b 58;		// byte LPH_diem_danh_nv/LPH_diem_danh_nv.lenData
-					getstatic_b 58;		// byte LPH_diem_danh_nv/LPH_diem_danh_nv.lenData
+					putstatic_b 60;		// byte LPH_diem_danh_nv/LPH_diem_danh_nv.lenData
+					getstatic_b 60;		// byte LPH_diem_danh_nv/LPH_diem_danh_nv.lenData
 					bspush 60;
 					if_scmple L2;
 				L1:	sspush 26368;
-					invokestatic 82;		// javacard/framework/ISOException.throwIt(S)V
+					invokestatic 48;		// javacard/framework/ISOException.throwIt(S)V
 				L2:	aload_2;
 					sconst_5;
-					getstatic_a 59;		// reference LPH_diem_danh_nv/LPH_diem_danh_nv.OpData
+					getstatic_a 61;		// reference LPH_diem_danh_nv/LPH_diem_danh_nv.OpData
 					sconst_0;
-					getstatic_b 58;		// byte LPH_diem_danh_nv/LPH_diem_danh_nv.lenData
-					invokestatic 60;		// javacard/framework/Util.arrayCopyNonAtomic([BS[BSS)S
+					getstatic_b 60;		// byte LPH_diem_danh_nv/LPH_diem_danh_nv.lenData
+					invokestatic 62;		// javacard/framework/Util.arrayCopyNonAtomic([BS[BSS)S
 					pop;
 					sconst_0;
 					sstore_3;
@@ -1167,9 +1179,9 @@
 				L5:	sconst_0;
 					sstore 6;
 				L6:	sload 6;
-					getstatic_b 58;		// byte LPH_diem_danh_nv/LPH_diem_danh_nv.lenData
+					getstatic_b 60;		// byte LPH_diem_danh_nv/LPH_diem_danh_nv.lenData
 					if_scmpgt_w L51;
-				L7:	getstatic_a 59;		// reference LPH_diem_danh_nv/LPH_diem_danh_nv.OpData
+				L7:	getstatic_a 61;		// reference LPH_diem_danh_nv/LPH_diem_danh_nv.OpData
 					sload 6;
 					baload;
 					sconst_2;
@@ -1177,7 +1189,7 @@
 				L8:	sconst_1;
 					sstore_3;
 					goto_w L50;
-				L9:	getstatic_a 59;		// reference LPH_diem_danh_nv/LPH_diem_danh_nv.OpData
+				L9:	getstatic_a 61;		// reference LPH_diem_danh_nv/LPH_diem_danh_nv.OpData
 					sload 6;
 					baload;
 					sconst_3;
@@ -1233,7 +1245,7 @@
 					goto L19;
 				L23:	aload 4;
 					sload 5;
-					getstatic_a 59;		// reference LPH_diem_danh_nv/LPH_diem_danh_nv.OpData
+					getstatic_a 61;		// reference LPH_diem_danh_nv/LPH_diem_danh_nv.OpData
 					sload 6;
 					baload;
 					bastore;
@@ -1247,86 +1259,86 @@
 					ifne_w L50;
 				L26:	sload 5;
 					ifeq_w L50;
-				L27:	getstatic_b 61;		// byte LPH_diem_danh_nv/LPH_diem_danh_nv.lenID
+				L27:	getstatic_b 63;		// byte LPH_diem_danh_nv/LPH_diem_danh_nv.lenID
 					ifne L33;
 				L28:	sload 5;
 					bspush 6;
 					if_scmple L30;
 				L29:	sspush 26368;
-					invokestatic 82;		// javacard/framework/ISOException.throwIt(S)V
+					invokestatic 48;		// javacard/framework/ISOException.throwIt(S)V
 				L30:	aload_0;
 					aload 4;
-					invokespecial 62;		// LPH_diem_danh_nv/LPH_diem_danh_nv.encrypt([B)[B
+					invokespecial 64;		// LPH_diem_danh_nv/LPH_diem_danh_nv.encrypt([B)[B
 					astore 7;
 				L31:	sspush 128;
 					newarray 11;
-					putstatic_a 63;		// reference LPH_diem_danh_nv/LPH_diem_danh_nv.OpID
+					putstatic_a 65;		// reference LPH_diem_danh_nv/LPH_diem_danh_nv.OpID
 					aload 7;
 					sconst_0;
-					getstatic_a 63;		// reference LPH_diem_danh_nv/LPH_diem_danh_nv.OpID
+					getstatic_a 65;		// reference LPH_diem_danh_nv/LPH_diem_danh_nv.OpID
 					sconst_0;
 					aload 7;
 					arraylength;
-					invokestatic 60;		// javacard/framework/Util.arrayCopyNonAtomic([BS[BSS)S
+					invokestatic 62;		// javacard/framework/Util.arrayCopyNonAtomic([BS[BSS)S
 					pop;
 					sload 5;
-					putstatic_b 61;		// byte LPH_diem_danh_nv/LPH_diem_danh_nv.lenID
+					putstatic_b 63;		// byte LPH_diem_danh_nv/LPH_diem_danh_nv.lenID
 					sconst_0;
 					newarray 11;
 					astore 4;
 				L32:	goto_w L49;
-				L33:	getstatic_b 64;		// byte LPH_diem_danh_nv/LPH_diem_danh_nv.lenNAME
+				L33:	getstatic_b 66;		// byte LPH_diem_danh_nv/LPH_diem_danh_nv.lenNAME
 					ifne L39;
 				L34:	sload 5;
 					bspush 25;
 					if_scmple L36;
 				L35:	sspush 26368;
-					invokestatic 82;		// javacard/framework/ISOException.throwIt(S)V
+					invokestatic 48;		// javacard/framework/ISOException.throwIt(S)V
 				L36:	aload_0;
 					aload 4;
-					invokespecial 62;		// LPH_diem_danh_nv/LPH_diem_danh_nv.encrypt([B)[B
+					invokespecial 64;		// LPH_diem_danh_nv/LPH_diem_danh_nv.encrypt([B)[B
 					astore 7;
 				L37:	sspush 128;
 					newarray 11;
-					putstatic_a 65;		// reference LPH_diem_danh_nv/LPH_diem_danh_nv.OpNAME
+					putstatic_a 67;		// reference LPH_diem_danh_nv/LPH_diem_danh_nv.OpNAME
 					aload 7;
 					sconst_0;
-					getstatic_a 65;		// reference LPH_diem_danh_nv/LPH_diem_danh_nv.OpNAME
+					getstatic_a 67;		// reference LPH_diem_danh_nv/LPH_diem_danh_nv.OpNAME
 					sconst_0;
 					aload 7;
 					arraylength;
-					invokestatic 60;		// javacard/framework/Util.arrayCopyNonAtomic([BS[BSS)S
+					invokestatic 62;		// javacard/framework/Util.arrayCopyNonAtomic([BS[BSS)S
 					pop;
 					sload 5;
-					putstatic_b 64;		// byte LPH_diem_danh_nv/LPH_diem_danh_nv.lenNAME
+					putstatic_b 66;		// byte LPH_diem_danh_nv/LPH_diem_danh_nv.lenNAME
 					sconst_0;
 					newarray 11;
 					astore 4;
 				L38:	goto L49;
-				L39:	getstatic_b 66;		// byte LPH_diem_danh_nv/LPH_diem_danh_nv.lenDATE
+				L39:	getstatic_b 68;		// byte LPH_diem_danh_nv/LPH_diem_danh_nv.lenDATE
 					ifne L45;
 				L40:	sload 5;
 					bspush 10;
 					if_scmple L42;
 				L41:	sspush 26368;
-					invokestatic 82;		// javacard/framework/ISOException.throwIt(S)V
+					invokestatic 48;		// javacard/framework/ISOException.throwIt(S)V
 				L42:	aload_0;
 					aload 4;
-					invokespecial 62;		// LPH_diem_danh_nv/LPH_diem_danh_nv.encrypt([B)[B
+					invokespecial 64;		// LPH_diem_danh_nv/LPH_diem_danh_nv.encrypt([B)[B
 					astore 7;
 				L43:	sspush 128;
 					newarray 11;
-					putstatic_a 67;		// reference LPH_diem_danh_nv/LPH_diem_danh_nv.OpDATE
+					putstatic_a 69;		// reference LPH_diem_danh_nv/LPH_diem_danh_nv.OpDATE
 					aload 7;
 					sconst_0;
-					getstatic_a 67;		// reference LPH_diem_danh_nv/LPH_diem_danh_nv.OpDATE
+					getstatic_a 69;		// reference LPH_diem_danh_nv/LPH_diem_danh_nv.OpDATE
 					sconst_0;
 					aload 7;
 					arraylength;
-					invokestatic 60;		// javacard/framework/Util.arrayCopyNonAtomic([BS[BSS)S
+					invokestatic 62;		// javacard/framework/Util.arrayCopyNonAtomic([BS[BSS)S
 					pop;
 					sload 5;
-					putstatic_b 66;		// byte LPH_diem_danh_nv/LPH_diem_danh_nv.lenDATE
+					putstatic_b 68;		// byte LPH_diem_danh_nv/LPH_diem_danh_nv.lenDATE
 					sconst_0;
 					newarray 11;
 					astore 4;
@@ -1335,24 +1347,24 @@
 					bspush 10;
 					if_scmple L47;
 				L46:	sspush 26368;
-					invokestatic 82;		// javacard/framework/ISOException.throwIt(S)V
+					invokestatic 48;		// javacard/framework/ISOException.throwIt(S)V
 				L47:	aload_0;
 					aload 4;
-					invokespecial 62;		// LPH_diem_danh_nv/LPH_diem_danh_nv.encrypt([B)[B
+					invokespecial 64;		// LPH_diem_danh_nv/LPH_diem_danh_nv.encrypt([B)[B
 					astore 7;
 				L48:	sspush 128;
 					newarray 11;
-					putstatic_a 68;		// reference LPH_diem_danh_nv/LPH_diem_danh_nv.OpPHONE
+					putstatic_a 70;		// reference LPH_diem_danh_nv/LPH_diem_danh_nv.OpPHONE
 					aload 7;
 					sconst_0;
-					getstatic_a 68;		// reference LPH_diem_danh_nv/LPH_diem_danh_nv.OpPHONE
+					getstatic_a 70;		// reference LPH_diem_danh_nv/LPH_diem_danh_nv.OpPHONE
 					sconst_0;
 					aload 7;
 					arraylength;
-					invokestatic 60;		// javacard/framework/Util.arrayCopyNonAtomic([BS[BSS)S
+					invokestatic 62;		// javacard/framework/Util.arrayCopyNonAtomic([BS[BSS)S
 					pop;
 					sload 5;
-					putstatic_b 69;		// byte LPH_diem_danh_nv/LPH_diem_danh_nv.lenPHONE
+					putstatic_b 71;		// byte LPH_diem_danh_nv/LPH_diem_danh_nv.lenPHONE
 				L49:	sconst_0;
 					sstore 5;
 				L50:	sinc 6 1;
@@ -1367,7 +1379,7 @@
 			.descriptor	Ljavacard/framework/APDU;	0.10;
 
 				L0:	aload_1;
-					invokevirtual 53;		// setIncomingAndReceive()S
+					invokevirtual 55;		// setIncomingAndReceive()S
 					pop;
 					aload_2;
 					sconst_2;
@@ -1375,25 +1387,25 @@
 					sconst_1;
 					if_scmpne L2;
 				L1:	aload_1;
-					invokevirtual 70;		// setOutgoing()S
+					invokevirtual 72;		// setOutgoing()S
 					pop;
 					aload_1;
-					getstatic_b 61;		// byte LPH_diem_danh_nv/LPH_diem_danh_nv.lenID
-					invokevirtual 71;		// setOutgoingLength(S)V
+					getstatic_b 63;		// byte LPH_diem_danh_nv/LPH_diem_danh_nv.lenID
+					invokevirtual 73;		// setOutgoingLength(S)V
 					aload_0;
-					getstatic_a 63;		// reference LPH_diem_danh_nv/LPH_diem_danh_nv.OpID
-					getstatic_b 61;		// byte LPH_diem_danh_nv/LPH_diem_danh_nv.lenID
-					invokespecial 72;		// LPH_diem_danh_nv/LPH_diem_danh_nv.decrypt([BB)[B
+					getstatic_a 65;		// reference LPH_diem_danh_nv/LPH_diem_danh_nv.OpID
+					getstatic_b 63;		// byte LPH_diem_danh_nv/LPH_diem_danh_nv.lenID
+					invokespecial 74;		// LPH_diem_danh_nv/LPH_diem_danh_nv.decrypt([BB)[B
 					sconst_0;
 					aload_2;
 					sconst_0;
-					getstatic_b 61;		// byte LPH_diem_danh_nv/LPH_diem_danh_nv.lenID
-					invokestatic 73;		// javacard/framework/Util.arrayCopy([BS[BSS)S
+					getstatic_b 63;		// byte LPH_diem_danh_nv/LPH_diem_danh_nv.lenID
+					invokestatic 75;		// javacard/framework/Util.arrayCopy([BS[BSS)S
 					pop;
 					aload_1;
 					sconst_0;
-					getstatic_b 61;		// byte LPH_diem_danh_nv/LPH_diem_danh_nv.lenID
-					invokevirtual 74;		// sendBytes(SS)V
+					getstatic_b 63;		// byte LPH_diem_danh_nv/LPH_diem_danh_nv.lenID
+					invokevirtual 76;		// sendBytes(SS)V
 					goto_w L8;
 				L2:	aload_2;
 					sconst_2;
@@ -1401,25 +1413,25 @@
 					sconst_2;
 					if_scmpne L4;
 				L3:	aload_1;
-					invokevirtual 70;		// setOutgoing()S
+					invokevirtual 72;		// setOutgoing()S
 					pop;
 					aload_1;
-					getstatic_b 64;		// byte LPH_diem_danh_nv/LPH_diem_danh_nv.lenNAME
-					invokevirtual 71;		// setOutgoingLength(S)V
+					getstatic_b 66;		// byte LPH_diem_danh_nv/LPH_diem_danh_nv.lenNAME
+					invokevirtual 73;		// setOutgoingLength(S)V
 					aload_0;
-					getstatic_a 65;		// reference LPH_diem_danh_nv/LPH_diem_danh_nv.OpNAME
-					getstatic_b 64;		// byte LPH_diem_danh_nv/LPH_diem_danh_nv.lenNAME
-					invokespecial 72;		// LPH_diem_danh_nv/LPH_diem_danh_nv.decrypt([BB)[B
+					getstatic_a 67;		// reference LPH_diem_danh_nv/LPH_diem_danh_nv.OpNAME
+					getstatic_b 66;		// byte LPH_diem_danh_nv/LPH_diem_danh_nv.lenNAME
+					invokespecial 74;		// LPH_diem_danh_nv/LPH_diem_danh_nv.decrypt([BB)[B
 					sconst_0;
 					aload_2;
 					sconst_0;
-					getstatic_b 64;		// byte LPH_diem_danh_nv/LPH_diem_danh_nv.lenNAME
-					invokestatic 73;		// javacard/framework/Util.arrayCopy([BS[BSS)S
+					getstatic_b 66;		// byte LPH_diem_danh_nv/LPH_diem_danh_nv.lenNAME
+					invokestatic 75;		// javacard/framework/Util.arrayCopy([BS[BSS)S
 					pop;
 					aload_1;
 					sconst_0;
-					getstatic_b 64;		// byte LPH_diem_danh_nv/LPH_diem_danh_nv.lenNAME
-					invokevirtual 74;		// sendBytes(SS)V
+					getstatic_b 66;		// byte LPH_diem_danh_nv/LPH_diem_danh_nv.lenNAME
+					invokevirtual 76;		// sendBytes(SS)V
 					goto L8;
 				L4:	aload_2;
 					sconst_2;
@@ -1427,25 +1439,25 @@
 					sconst_3;
 					if_scmpne L6;
 				L5:	aload_1;
-					invokevirtual 70;		// setOutgoing()S
+					invokevirtual 72;		// setOutgoing()S
 					pop;
 					aload_1;
-					getstatic_b 66;		// byte LPH_diem_danh_nv/LPH_diem_danh_nv.lenDATE
-					invokevirtual 71;		// setOutgoingLength(S)V
+					getstatic_b 68;		// byte LPH_diem_danh_nv/LPH_diem_danh_nv.lenDATE
+					invokevirtual 73;		// setOutgoingLength(S)V
 					aload_0;
-					getstatic_a 67;		// reference LPH_diem_danh_nv/LPH_diem_danh_nv.OpDATE
-					getstatic_b 66;		// byte LPH_diem_danh_nv/LPH_diem_danh_nv.lenDATE
-					invokespecial 72;		// LPH_diem_danh_nv/LPH_diem_danh_nv.decrypt([BB)[B
+					getstatic_a 69;		// reference LPH_diem_danh_nv/LPH_diem_danh_nv.OpDATE
+					getstatic_b 68;		// byte LPH_diem_danh_nv/LPH_diem_danh_nv.lenDATE
+					invokespecial 74;		// LPH_diem_danh_nv/LPH_diem_danh_nv.decrypt([BB)[B
 					sconst_0;
 					aload_2;
 					sconst_0;
-					getstatic_b 66;		// byte LPH_diem_danh_nv/LPH_diem_danh_nv.lenDATE
-					invokestatic 73;		// javacard/framework/Util.arrayCopy([BS[BSS)S
+					getstatic_b 68;		// byte LPH_diem_danh_nv/LPH_diem_danh_nv.lenDATE
+					invokestatic 75;		// javacard/framework/Util.arrayCopy([BS[BSS)S
 					pop;
 					aload_1;
 					sconst_0;
-					getstatic_b 66;		// byte LPH_diem_danh_nv/LPH_diem_danh_nv.lenDATE
-					invokevirtual 74;		// sendBytes(SS)V
+					getstatic_b 68;		// byte LPH_diem_danh_nv/LPH_diem_danh_nv.lenDATE
+					invokevirtual 76;		// sendBytes(SS)V
 					goto L8;
 				L6:	aload_2;
 					sconst_2;
@@ -1453,25 +1465,25 @@
 					sconst_4;
 					if_scmpne L8;
 				L7:	aload_1;
-					invokevirtual 70;		// setOutgoing()S
+					invokevirtual 72;		// setOutgoing()S
 					pop;
 					aload_1;
-					getstatic_b 69;		// byte LPH_diem_danh_nv/LPH_diem_danh_nv.lenPHONE
-					invokevirtual 71;		// setOutgoingLength(S)V
+					getstatic_b 71;		// byte LPH_diem_danh_nv/LPH_diem_danh_nv.lenPHONE
+					invokevirtual 73;		// setOutgoingLength(S)V
 					aload_0;
-					getstatic_a 68;		// reference LPH_diem_danh_nv/LPH_diem_danh_nv.OpPHONE
-					getstatic_b 69;		// byte LPH_diem_danh_nv/LPH_diem_danh_nv.lenPHONE
-					invokespecial 72;		// LPH_diem_danh_nv/LPH_diem_danh_nv.decrypt([BB)[B
+					getstatic_a 70;		// reference LPH_diem_danh_nv/LPH_diem_danh_nv.OpPHONE
+					getstatic_b 71;		// byte LPH_diem_danh_nv/LPH_diem_danh_nv.lenPHONE
+					invokespecial 74;		// LPH_diem_danh_nv/LPH_diem_danh_nv.decrypt([BB)[B
 					sconst_0;
 					aload_2;
 					sconst_0;
-					getstatic_b 69;		// byte LPH_diem_danh_nv/LPH_diem_danh_nv.lenPHONE
-					invokestatic 73;		// javacard/framework/Util.arrayCopy([BS[BSS)S
+					getstatic_b 71;		// byte LPH_diem_danh_nv/LPH_diem_danh_nv.lenPHONE
+					invokestatic 75;		// javacard/framework/Util.arrayCopy([BS[BSS)S
 					pop;
 					aload_1;
 					sconst_0;
-					getstatic_b 69;		// byte LPH_diem_danh_nv/LPH_diem_danh_nv.lenPHONE
-					invokevirtual 74;		// sendBytes(SS)V
+					getstatic_b 71;		// byte LPH_diem_danh_nv/LPH_diem_danh_nv.lenPHONE
+					invokevirtual 76;		// sendBytes(SS)V
 				L8:	return;
 		}
 
@@ -1482,13 +1494,13 @@
 			.descriptor	Ljavacard/framework/APDU;	0.10;
 
 				L0:	sconst_0;
-					putstatic_b 61;		// byte LPH_diem_danh_nv/LPH_diem_danh_nv.lenID
+					putstatic_b 63;		// byte LPH_diem_danh_nv/LPH_diem_danh_nv.lenID
 					sconst_0;
-					putstatic_b 66;		// byte LPH_diem_danh_nv/LPH_diem_danh_nv.lenDATE
+					putstatic_b 68;		// byte LPH_diem_danh_nv/LPH_diem_danh_nv.lenDATE
 					sconst_0;
-					putstatic_b 64;		// byte LPH_diem_danh_nv/LPH_diem_danh_nv.lenNAME
+					putstatic_b 66;		// byte LPH_diem_danh_nv/LPH_diem_danh_nv.lenNAME
 					sconst_0;
-					putstatic_b 69;		// byte LPH_diem_danh_nv/LPH_diem_danh_nv.lenPHONE
+					putstatic_b 71;		// byte LPH_diem_danh_nv/LPH_diem_danh_nv.lenPHONE
 					return;
 		}
 
@@ -1499,7 +1511,7 @@
 			.descriptor	Ljavacard/framework/APDU;	0.10;
 
 				L0:	aload_1;
-					invokevirtual 53;		// setIncomingAndReceive()S
+					invokevirtual 55;		// setIncomingAndReceive()S
 					pop;
 					aload_2;
 					sconst_2;
@@ -1511,13 +1523,29 @@
 					sload_3;
 					smul;
 					sstore 4;
-				L2:	aload_2;
+				L2:	sload 4;
+					s2i;
+					sipush 249;
+					iadd;
+					getstatic_a 16;		// reference LPH_diem_danh_nv/LPH_diem_danh_nv.OpImage
+					arraylength;
+					s2i;
+					icmp;
+					ifle L4;
+				L3:	sspush 26368;
+					invokestatic 48;		// javacard/framework/ISOException.throwIt(S)V
+				L4:	aload_2;
 					sconst_5;
-					getstatic_a 14;		// reference LPH_diem_danh_nv/LPH_diem_danh_nv.OpImage
+					getstatic_a 16;		// reference LPH_diem_danh_nv/LPH_diem_danh_nv.OpImage
 					sload 4;
 					sspush 249;
-					invokestatic 73;		// javacard/framework/Util.arrayCopy([BS[BSS)S
+					invokestatic 75;		// javacard/framework/Util.arrayCopy([BS[BSS)S
 					pop;
+					aload_0;
+					sload 4;
+					sspush 249;
+					sadd;
+					putfield_s 0;		// short LPH_diem_danh_nv/LPH_diem_danh_nv.imageLen
 					return;
 		}
 
@@ -1528,14 +1556,14 @@
 			.descriptor	Ljavacard/framework/APDU;	0.10;
 
 				L0:	aload_1;
-					invokevirtual 53;		// setIncomingAndReceive()S
+					invokevirtual 55;		// setIncomingAndReceive()S
 					pop;
 					aload_2;
 					sconst_5;
-					getstatic_a 15;		// reference LPH_diem_danh_nv/LPH_diem_danh_nv.size
+					getstatic_a 17;		// reference LPH_diem_danh_nv/LPH_diem_danh_nv.size
 					sconst_0;
 					bspush 7;
-					invokestatic 73;		// javacard/framework/Util.arrayCopy([BS[BSS)S
+					invokestatic 75;		// javacard/framework/Util.arrayCopy([BS[BSS)S
 					pop;
 					return;
 		}
@@ -1547,40 +1575,40 @@
 			.descriptor	Ljavacard/framework/APDU;	0.10;
 
 				L0:	aload_1;
-					invokevirtual 53;		// setIncomingAndReceive()S
+					invokevirtual 55;		// setIncomingAndReceive()S
 					pop;
 					aload_1;
-					invokevirtual 70;		// setOutgoing()S
+					invokevirtual 72;		// setOutgoing()S
 					pop;
 					aload_1;
 					bspush 7;
-					invokevirtual 71;		// setOutgoingLength(S)V
-					getstatic_a 15;		// reference LPH_diem_danh_nv/LPH_diem_danh_nv.size
+					invokevirtual 73;		// setOutgoingLength(S)V
+					getstatic_a 17;		// reference LPH_diem_danh_nv/LPH_diem_danh_nv.size
 					sconst_0;
 					aload_2;
 					sconst_0;
-					getstatic_a 15;		// reference LPH_diem_danh_nv/LPH_diem_danh_nv.size
+					getstatic_a 17;		// reference LPH_diem_danh_nv/LPH_diem_danh_nv.size
 					arraylength;
-					invokestatic 73;		// javacard/framework/Util.arrayCopy([BS[BSS)S
+					invokestatic 75;		// javacard/framework/Util.arrayCopy([BS[BSS)S
 					pop;
 					aload_1;
 					sconst_0;
 					bspush 7;
-					invokevirtual 74;		// sendBytes(SS)V
+					invokevirtual 76;		// sendBytes(SS)V
 					return;
 		}
 
 		.method private OututImage(Ljavacard/framework/APDU;[B)V {
 			.stack 4;
-			.locals 2;
+			.locals 3;
 
 			.descriptor	Ljavacard/framework/APDU;	0.10;
 
 				L0:	aload_1;
-					invokevirtual 53;		// setIncomingAndReceive()S
+					invokevirtual 55;		// setIncomingAndReceive()S
 					pop;
 					aload_1;
-					invokevirtual 70;		// setOutgoing()S
+					invokevirtual 72;		// setOutgoing()S
 					pop;
 					aload_2;
 					sconst_2;
@@ -1592,14 +1620,33 @@
 					sload_3;
 					smul;
 					sstore 4;
-				L2:	aload_1;
-					sspush 249;
-					invokevirtual 71;		// setOutgoingLength(S)V
-					aload_1;
-					getstatic_a 14;		// reference LPH_diem_danh_nv/LPH_diem_danh_nv.OpImage
+				L2:	sload 4;
+					getfield_s_this 0;		// short LPH_diem_danh_nv/LPH_diem_danh_nv.imageLen
+					if_scmplt L4;
+				L3:	sspush 26368;
+					invokestatic 48;		// javacard/framework/ISOException.throwIt(S)V
+				L4:	getfield_s_this 0;		// short LPH_diem_danh_nv/LPH_diem_danh_nv.imageLen
+					s2i;
 					sload 4;
-					sspush 249;
-					invokevirtual 75;		// sendBytesLong([BSS)V
+					s2i;
+					isub;
+					sipush 249;
+					icmp;
+					ifle L6;
+				L5:	sspush 249;
+					goto L7;
+				L6:	getfield_s_this 0;		// short LPH_diem_danh_nv/LPH_diem_danh_nv.imageLen
+					sload 4;
+					ssub;
+				L7:	sstore 5;
+				L8:	aload_1;
+					sload 5;
+					invokevirtual 73;		// setOutgoingLength(S)V
+					aload_1;
+					getstatic_a 16;		// reference LPH_diem_danh_nv/LPH_diem_danh_nv.OpImage
+					sload 4;
+					sload 5;
+					invokevirtual 77;		// sendBytesLong([BSS)V
 					return;
 		}
 
@@ -1625,9 +1672,9 @@
 
 				L0:	aload_0;
 					sconst_0;
-					putfield_s 5;		// short LPH_diem_danh_nv/LPH_diem_danh_nv.logged_ids
-					getfield_a_this 1;		// reference LPH_diem_danh_nv/LPH_diem_danh_nv.pin
-					invokevirtual 76;		// reset()V
+					putfield_s 7;		// short LPH_diem_danh_nv/LPH_diem_danh_nv.logged_ids
+					getfield_a_this 3;		// reference LPH_diem_danh_nv/LPH_diem_danh_nv.pin
+					invokevirtual 78;		// reset()V
 					return;
 		}
 
@@ -1638,22 +1685,22 @@
 			.descriptor	Ljavacard/framework/APDU;	0.10;
 
 				L0:	aload_1;
-					invokevirtual 70;		// setOutgoing()S
+					invokevirtual 72;		// setOutgoing()S
 					pop;
 					aload_1;
 					sconst_1;
-					invokevirtual 71;		// setOutgoingLength(S)V
-					getstatic_a 51;		// reference LPH_diem_danh_nv/LPH_diem_danh_nv.first_logged_ids
+					invokevirtual 73;		// setOutgoingLength(S)V
+					getstatic_a 53;		// reference LPH_diem_danh_nv/LPH_diem_danh_nv.first_logged_ids
 					sconst_0;
 					aload_2;
 					sconst_0;
 					sconst_1;
-					invokestatic 73;		// javacard/framework/Util.arrayCopy([BS[BSS)S
+					invokestatic 75;		// javacard/framework/Util.arrayCopy([BS[BSS)S
 					pop;
 					aload_1;
 					sconst_0;
 					sconst_1;
-					invokevirtual 74;		// sendBytes(SS)V
+					invokevirtual 76;		// sendBytes(SS)V
 					return;
 		}
 
@@ -1664,16 +1711,16 @@
 			.descriptor	Ljavacard/framework/APDU;	0.10;
 
 				L0:	aload_1;
-					invokevirtual 70;		// setOutgoing()S
+					invokevirtual 72;		// setOutgoing()S
 					pop;
 					aload_1;
 					sconst_1;
-					invokevirtual 71;		// setOutgoingLength(S)V
+					invokevirtual 73;		// setOutgoingLength(S)V
 					sconst_1;
 					newarray 11;
 					dup;
 					sconst_0;
-					getfield_s_this 5;		// short LPH_diem_danh_nv/LPH_diem_danh_nv.logged_ids
+					getfield_s_this 7;		// short LPH_diem_danh_nv/LPH_diem_danh_nv.logged_ids
 					s2b;
 					bastore;
 					astore_3;
@@ -1682,12 +1729,12 @@
 					aload_2;
 					sconst_0;
 					sconst_1;
-					invokestatic 73;		// javacard/framework/Util.arrayCopy([BS[BSS)S
+					invokestatic 75;		// javacard/framework/Util.arrayCopy([BS[BSS)S
 					pop;
 					aload_1;
 					sconst_0;
 					sconst_1;
-					invokevirtual 74;		// sendBytes(SS)V
+					invokevirtual 76;		// sendBytes(SS)V
 					return;
 		}
 
@@ -1695,10 +1742,10 @@
 			.stack 6;
 			.locals 4;
 
-				L0:	getfield_a_this 3;		// reference LPH_diem_danh_nv/LPH_diem_danh_nv.aesCipher
-					getfield_a_this 4;		// reference LPH_diem_danh_nv/LPH_diem_danh_nv.aesKey
+				L0:	getfield_a_this 5;		// reference LPH_diem_danh_nv/LPH_diem_danh_nv.aesCipher
+					getfield_a_this 6;		// reference LPH_diem_danh_nv/LPH_diem_danh_nv.aesKey
 					sconst_2;
-					invokevirtual 77;		// init(Ljavacard/security/Key;B)V
+					invokevirtual 79;		// init(Ljavacard/security/Key;B)V
 					sconst_1;
 					sstore_2;
 				L1:	sspush 128;
@@ -1731,26 +1778,26 @@
 				L9:	goto L2;
 				L10:	sspush 128;
 					sconst_2;
-					invokestatic 40;		// javacard/framework/JCSystem.makeTransientByteArray(SB)[B
+					invokestatic 42;		// javacard/framework/JCSystem.makeTransientByteArray(SB)[B
 					astore 4;
 				L11:	goto L14;
 				L12:	astore 5;
 				L13:	sspush 128;
 					newarray 11;
 					astore 4;
-				L14:	getfield_a_this 3;		// reference LPH_diem_danh_nv/LPH_diem_danh_nv.aesCipher
+				L14:	getfield_a_this 5;		// reference LPH_diem_danh_nv/LPH_diem_danh_nv.aesCipher
 					aload_3;
 					sconst_0;
 					sspush 128;
 					aload 4;
 					sconst_0;
-					invokevirtual 78;		// doFinal([BSS[BS)S
+					invokevirtual 80;		// doFinal([BSS[BS)S
 					pop;
 					aload 4;
 					areturn;
 			.exceptionTable {
 				// start_block end_block handler_block catch_type_index
-				L10 L11 L12 39;
+				L10 L11 L12 41;
 			}
 		}
 
@@ -1760,26 +1807,26 @@
 
 				L0:	sload_2;
 					ifeq L7;
-				L1:	getfield_a_this 3;		// reference LPH_diem_danh_nv/LPH_diem_danh_nv.aesCipher
-					getfield_a_this 4;		// reference LPH_diem_danh_nv/LPH_diem_danh_nv.aesKey
+				L1:	getfield_a_this 5;		// reference LPH_diem_danh_nv/LPH_diem_danh_nv.aesCipher
+					getfield_a_this 6;		// reference LPH_diem_danh_nv/LPH_diem_danh_nv.aesKey
 					sconst_1;
-					invokevirtual 77;		// init(Ljavacard/security/Key;B)V
+					invokevirtual 79;		// init(Ljavacard/security/Key;B)V
 				L2:	sspush 128;
 					sconst_2;
-					invokestatic 40;		// javacard/framework/JCSystem.makeTransientByteArray(SB)[B
+					invokestatic 42;		// javacard/framework/JCSystem.makeTransientByteArray(SB)[B
 					astore_3;
 				L3:	goto L6;
 				L4:	astore 4;
 				L5:	sspush 128;
 					newarray 11;
 					astore_3;
-				L6:	getfield_a_this 3;		// reference LPH_diem_danh_nv/LPH_diem_danh_nv.aesCipher
+				L6:	getfield_a_this 5;		// reference LPH_diem_danh_nv/LPH_diem_danh_nv.aesCipher
 					aload_1;
 					sconst_0;
 					sspush 128;
 					aload_3;
 					sconst_0;
-					invokevirtual 78;		// doFinal([BSS[BS)S
+					invokevirtual 80;		// doFinal([BSS[BS)S
 					pop;
 					aload_3;
 					areturn;
@@ -1790,7 +1837,7 @@
 					areturn;
 			.exceptionTable {
 				// start_block end_block handler_block catch_type_index
-				L2 L3 L4 39;
+				L2 L3 L4 41;
 			}
 		}
 
@@ -1825,9 +1872,9 @@
 			.stack 5;
 			.locals 0;
 
-				L0:	new 79;		// LPH_diem_danh_nv/RSAApplet
+				L0:	new 81;		// LPH_diem_danh_nv/RSAApplet
 					dup;
-					invokespecial 80;		// LPH_diem_danh_nv/RSAApplet.<init>()V
+					invokespecial 82;		// LPH_diem_danh_nv/RSAApplet.<init>()V
 					aload_0;
 					sload_1;
 					sconst_1;
@@ -1835,7 +1882,7 @@
 					aload_0;
 					sload_1;
 					baload;
-					invokevirtual 81;		// register([BSB)V
+					invokevirtual 83;		// register([BSB)V
 					return;
 		}
 
@@ -1844,53 +1891,53 @@
 			.locals 1;
 
 				L0:	aload_0;
-					invokespecial 11;		// javacard/framework/Applet.<init>()V
+					invokespecial 90;		// javacard/framework/Applet.<init>()V
 					aload_0;
 					sspush 128;
-					putfield_s 6;		// short LPH_diem_danh_nv/RSAApplet.sigLen
+					putfield_s 8;		// short LPH_diem_danh_nv/RSAApplet.sigLen
 					aload_0;
 					bspush 10;
 					sconst_0;
-					invokestatic 83;		// javacard/security/Signature.getInstance(BZ)Ljavacard/security/Signature;
-					putfield_a 7;		// reference LPH_diem_danh_nv/RSAApplet.rsaSig
+					invokestatic 85;		// javacard/security/Signature.getInstance(BZ)Ljavacard/security/Signature;
+					putfield_a 9;		// reference LPH_diem_danh_nv/RSAApplet.rsaSig
 					aload_0;
 					sconst_5;
 					bspush 8;
-					getfield_s_this 6;		// short LPH_diem_danh_nv/RSAApplet.sigLen
+					getfield_s_this 8;		// short LPH_diem_danh_nv/RSAApplet.sigLen
 					smul;
 					sconst_0;
-					invokestatic 44;		// javacard/security/KeyBuilder.buildKey(BSZ)Ljavacard/security/Key;
-					checkcast 0 85;		// T_CLASSORINTERFACE javacard/security/RSAPrivateKey
-					putfield_a 8;		// reference LPH_diem_danh_nv/RSAApplet.rsaPrivKey
+					invokestatic 46;		// javacard/security/KeyBuilder.buildKey(BSZ)Ljavacard/security/Key;
+					checkcast 0 87;		// T_CLASSORINTERFACE javacard/security/RSAPrivateKey
+					putfield_a 10;		// reference LPH_diem_danh_nv/RSAApplet.rsaPrivKey
 					aload_0;
 					sconst_4;
 					bspush 8;
-					getfield_s_this 6;		// short LPH_diem_danh_nv/RSAApplet.sigLen
+					getfield_s_this 8;		// short LPH_diem_danh_nv/RSAApplet.sigLen
 					smul;
 					sconst_0;
-					invokestatic 44;		// javacard/security/KeyBuilder.buildKey(BSZ)Ljavacard/security/Key;
-					checkcast 0 87;		// T_CLASSORINTERFACE javacard/security/RSAPublicKey
-					putfield_a 9;		// reference LPH_diem_danh_nv/RSAApplet.rsaPubKey
-					new 89;		// javacard/security/KeyPair
+					invokestatic 46;		// javacard/security/KeyBuilder.buildKey(BSZ)Ljavacard/security/Key;
+					checkcast 0 89;		// T_CLASSORINTERFACE javacard/security/RSAPublicKey
+					putfield_a 11;		// reference LPH_diem_danh_nv/RSAApplet.rsaPubKey
+					new 91;		// javacard/security/KeyPair
 					dup;
 					sconst_1;
 					bspush 8;
-					getfield_s_this 6;		// short LPH_diem_danh_nv/RSAApplet.sigLen
+					getfield_s_this 8;		// short LPH_diem_danh_nv/RSAApplet.sigLen
 					smul;
-					invokespecial 90;		// javacard/security/KeyPair.<init>(BS)V
+					invokespecial 92;		// javacard/security/KeyPair.<init>(BS)V
 					astore_1;
 				L1:	aload_1;
-					invokevirtual 91;		// genKeyPair()V
+					invokevirtual 93;		// genKeyPair()V
 					aload_0;
 					aload_1;
-					invokevirtual 92;		// getPrivate()Ljavacard/security/PrivateKey;
-					checkcast 0 85;		// T_CLASSORINTERFACE javacard/security/RSAPrivateKey
-					putfield_a 8;		// reference LPH_diem_danh_nv/RSAApplet.rsaPrivKey
+					invokevirtual 94;		// getPrivate()Ljavacard/security/PrivateKey;
+					checkcast 0 87;		// T_CLASSORINTERFACE javacard/security/RSAPrivateKey
+					putfield_a 10;		// reference LPH_diem_danh_nv/RSAApplet.rsaPrivKey
 					aload_0;
 					aload_1;
-					invokevirtual 93;		// getPublic()Ljavacard/security/PublicKey;
-					checkcast 0 87;		// T_CLASSORINTERFACE javacard/security/RSAPublicKey
-					putfield_a 9;		// reference LPH_diem_danh_nv/RSAApplet.rsaPubKey
+					invokevirtual 95;		// getPublic()Ljavacard/security/PublicKey;
+					checkcast 0 89;		// T_CLASSORINTERFACE javacard/security/RSAPublicKey
+					putfield_a 11;		// reference LPH_diem_danh_nv/RSAApplet.rsaPubKey
 					return;
 		}
 
@@ -1901,11 +1948,11 @@
 			.descriptor	Ljavacard/framework/APDU;	0.10;
 
 				L0:	aload_0;
-					invokevirtual 94;		// selectingApplet()Z
+					invokevirtual 96;		// selectingApplet()Z
 					ifeq L2;
 				L1:	return;
 				L2:	aload_1;
-					invokevirtual 56;		// getBuffer()[B
+					invokevirtual 45;		// getBuffer()[B
 					astore_2;
 				L3:	aload_2;
 					sconst_1;
@@ -1913,18 +1960,18 @@
 					stableswitch L7 0 2 L4 L5 L6;
 				L4:	aload_0;
 					aload_1;
-					invokespecial 95;		// LPH_diem_danh_nv/RSAApplet.sendPublicModulus(Ljavacard/framework/APDU;)V
+					invokespecial 97;		// LPH_diem_danh_nv/RSAApplet.sendPublicModulus(Ljavacard/framework/APDU;)V
 					goto L8;
 				L5:	aload_0;
 					aload_1;
-					invokespecial 96;		// LPH_diem_danh_nv/RSAApplet.sendPublicExponent(Ljavacard/framework/APDU;)V
+					invokespecial 98;		// LPH_diem_danh_nv/RSAApplet.sendPublicExponent(Ljavacard/framework/APDU;)V
 					goto L8;
 				L6:	aload_0;
 					aload_1;
-					invokespecial 97;		// LPH_diem_danh_nv/RSAApplet.rsaSign(Ljavacard/framework/APDU;)V
+					invokespecial 99;		// LPH_diem_danh_nv/RSAApplet.rsaSign(Ljavacard/framework/APDU;)V
 					goto L8;
 				L7:	sspush 27904;
-					invokestatic 82;		// javacard/framework/ISOException.throwIt(S)V
+					invokestatic 48;		// javacard/framework/ISOException.throwIt(S)V
 				L8:	return;
 		}
 
@@ -1935,20 +1982,20 @@
 			.descriptor	Ljavacard/framework/APDU;	0.10;
 
 				L0:	aload_1;
-					invokevirtual 53;		// setIncomingAndReceive()S
+					invokevirtual 55;		// setIncomingAndReceive()S
 					pop;
 					aload_1;
-					invokevirtual 56;		// getBuffer()[B
+					invokevirtual 45;		// getBuffer()[B
 					astore_2;
-				L1:	getfield_a_this 9;		// reference LPH_diem_danh_nv/RSAApplet.rsaPubKey
+				L1:	getfield_a_this 11;		// reference LPH_diem_danh_nv/RSAApplet.rsaPubKey
 					aload_2;
 					sconst_0;
-					invokeinterface 3 87 4;		// javacard/security/RSAPublicKey
+					invokeinterface 3 89 4;		// javacard/security/RSAPublicKey
 					sstore_3;
 				L2:	aload_1;
 					sconst_0;
 					sload_3;
-					invokevirtual 98;		// setOutgoingAndSend(SS)V
+					invokevirtual 100;		// setOutgoingAndSend(SS)V
 					return;
 		}
 
@@ -1959,20 +2006,20 @@
 			.descriptor	Ljavacard/framework/APDU;	0.10;
 
 				L0:	aload_1;
-					invokevirtual 53;		// setIncomingAndReceive()S
+					invokevirtual 55;		// setIncomingAndReceive()S
 					pop;
 					aload_1;
-					invokevirtual 56;		// getBuffer()[B
+					invokevirtual 45;		// getBuffer()[B
 					astore_2;
-				L1:	getfield_a_this 9;		// reference LPH_diem_danh_nv/RSAApplet.rsaPubKey
+				L1:	getfield_a_this 11;		// reference LPH_diem_danh_nv/RSAApplet.rsaPubKey
 					aload_2;
 					sconst_0;
-					invokeinterface 3 87 5;		// javacard/security/RSAPublicKey
+					invokeinterface 3 89 5;		// javacard/security/RSAPublicKey
 					sstore_3;
 				L2:	aload_1;
 					sconst_0;
 					sload_3;
-					invokevirtual 98;		// setOutgoingAndSend(SS)V
+					invokevirtual 100;		// setOutgoingAndSend(SS)V
 					return;
 		}
 
@@ -1983,15 +2030,15 @@
 			.descriptor	Ljavacard/framework/APDU;	0.10;
 
 				L0:	aload_1;
-					invokevirtual 56;		// getBuffer()[B
+					invokevirtual 45;		// getBuffer()[B
 					astore_2;
 				L1:	aload_1;
-					invokevirtual 53;		// setIncomingAndReceive()S
+					invokevirtual 55;		// setIncomingAndReceive()S
 					sstore_3;
 				L2:	sload_3;
 					newarray 11;
 					astore 4;
-				L3:	getfield_s_this 6;		// short LPH_diem_danh_nv/RSAApplet.sigLen
+				L3:	getfield_s_this 8;		// short LPH_diem_danh_nv/RSAApplet.sigLen
 					newarray 11;
 					astore 5;
 				L4:	aload_2;
@@ -1999,32 +2046,32 @@
 					aload 4;
 					sconst_0;
 					sload_3;
-					invokestatic 73;		// javacard/framework/Util.arrayCopy([BS[BSS)S
+					invokestatic 75;		// javacard/framework/Util.arrayCopy([BS[BSS)S
 					pop;
-					getfield_a_this 7;		// reference LPH_diem_danh_nv/RSAApplet.rsaSig
-					getfield_a_this 8;		// reference LPH_diem_danh_nv/RSAApplet.rsaPrivKey
+					getfield_a_this 9;		// reference LPH_diem_danh_nv/RSAApplet.rsaSig
+					getfield_a_this 10;		// reference LPH_diem_danh_nv/RSAApplet.rsaPrivKey
 					sconst_1;
-					invokevirtual 99;		// init(Ljavacard/security/Key;B)V
-					getfield_a_this 7;		// reference LPH_diem_danh_nv/RSAApplet.rsaSig
+					invokevirtual 101;		// init(Ljavacard/security/Key;B)V
+					getfield_a_this 9;		// reference LPH_diem_danh_nv/RSAApplet.rsaSig
 					aload 4;
 					sconst_0;
 					aload 4;
 					arraylength;
 					aload 5;
 					sconst_0;
-					invokevirtual 100;		// sign([BSS[BS)S
+					invokevirtual 102;		// sign([BSS[BS)S
 					pop;
 					aload_1;
-					invokevirtual 70;		// setOutgoing()S
+					invokevirtual 72;		// setOutgoing()S
 					pop;
 					aload_1;
-					getfield_s_this 6;		// short LPH_diem_danh_nv/RSAApplet.sigLen
-					invokevirtual 71;		// setOutgoingLength(S)V
+					getfield_s_this 8;		// short LPH_diem_danh_nv/RSAApplet.sigLen
+					invokevirtual 73;		// setOutgoingLength(S)V
 					aload_1;
 					aload 5;
 					sconst_0;
-					getfield_s_this 6;		// short LPH_diem_danh_nv/RSAApplet.sigLen
-					invokevirtual 75;		// sendBytesLong([BSS)V
+					getfield_s_this 8;		// short LPH_diem_danh_nv/RSAApplet.sigLen
+					invokevirtual 77;		// sendBytesLong([BSS)V
 					return;
 		}
 
@@ -2055,7 +2102,7 @@
 			.locals 0;
 
 				L0:	aload_0;
-					invokespecial 84;		// java/lang/Object.<init>()V
+					invokespecial 58;		// java/lang/Object.<init>()V
 					return;
 		}
 
@@ -2065,20 +2112,20 @@
 
 				L0:	bspush 64;
 					sconst_2;
-					invokestatic 101;		// javacard/framework/JCSystem.makeTransientShortArray(SB)[S
-					putstatic_a 102;		// reference LPH_diem_danh_nv/Sha512.w_short
+					invokestatic 103;		// javacard/framework/JCSystem.makeTransientShortArray(SB)[S
+					putstatic_a 104;		// reference LPH_diem_danh_nv/Sha512.w_short
 					bspush 32;
 					sconst_2;
-					invokestatic 101;		// javacard/framework/JCSystem.makeTransientShortArray(SB)[S
-					putstatic_a 103;		// reference LPH_diem_danh_nv/Sha512.h_short
+					invokestatic 103;		// javacard/framework/JCSystem.makeTransientShortArray(SB)[S
+					putstatic_a 105;		// reference LPH_diem_danh_nv/Sha512.h_short
 					bspush 32;
 					sconst_2;
-					invokestatic 101;		// javacard/framework/JCSystem.makeTransientShortArray(SB)[S
-					putstatic_a 104;		// reference LPH_diem_danh_nv/Sha512.hashState
+					invokestatic 103;		// javacard/framework/JCSystem.makeTransientShortArray(SB)[S
+					putstatic_a 106;		// reference LPH_diem_danh_nv/Sha512.hashState
 					sspush 128;
 					sconst_2;
-					invokestatic 40;		// javacard/framework/JCSystem.makeTransientByteArray(SB)[B
-					putstatic_a 105;		// reference LPH_diem_danh_nv/Sha512.buffer
+					invokestatic 42;		// javacard/framework/JCSystem.makeTransientByteArray(SB)[B
+					putstatic_a 107;		// reference LPH_diem_danh_nv/Sha512.buffer
 					return;
 		}
 
@@ -2091,7 +2138,7 @@
 				L1:	sload 19;
 					bspush 64;
 					if_scmpge L3;
-				L2:	getstatic_a 102;		// reference LPH_diem_danh_nv/Sha512.w_short
+				L2:	getstatic_a 104;		// reference LPH_diem_danh_nv/Sha512.w_short
 					sload 19;
 					aload_2;
 					sload_3;
@@ -2099,7 +2146,7 @@
 					sload 19;
 					smul;
 					sadd;
-					invokestatic 106;		// javacard/framework/Util.getShort([BS)S
+					invokestatic 108;		// javacard/framework/Util.getShort([BS)S
 					sastore;
 					sinc 19 1;
 					goto L1;
@@ -2130,23 +2177,23 @@
 					bspush 64;
 					srem;
 					sstore 6;
-				L10:	getstatic_a 102;		// reference LPH_diem_danh_nv/Sha512.w_short
+				L10:	getstatic_a 104;		// reference LPH_diem_danh_nv/Sha512.w_short
 					sload 4;
 					saload;
 					sstore 15;
-				L11:	getstatic_a 102;		// reference LPH_diem_danh_nv/Sha512.w_short
+				L11:	getstatic_a 104;		// reference LPH_diem_danh_nv/Sha512.w_short
 					sload 4;
 					sconst_1;
 					sadd;
 					saload;
 					sstore 16;
-				L12:	getstatic_a 102;		// reference LPH_diem_danh_nv/Sha512.w_short
+				L12:	getstatic_a 104;		// reference LPH_diem_danh_nv/Sha512.w_short
 					sload 4;
 					sconst_2;
 					sadd;
 					saload;
 					sstore 17;
-				L13:	getstatic_a 102;		// reference LPH_diem_danh_nv/Sha512.w_short
+				L13:	getstatic_a 104;		// reference LPH_diem_danh_nv/Sha512.w_short
 					sload 4;
 					sconst_3;
 					sadd;
@@ -2268,23 +2315,23 @@
 					sor;
 					sxor;
 					sstore 10;
-				L18:	getstatic_a 102;		// reference LPH_diem_danh_nv/Sha512.w_short
+				L18:	getstatic_a 104;		// reference LPH_diem_danh_nv/Sha512.w_short
 					sload 5;
 					saload;
 					sstore 11;
-				L19:	getstatic_a 102;		// reference LPH_diem_danh_nv/Sha512.w_short
+				L19:	getstatic_a 104;		// reference LPH_diem_danh_nv/Sha512.w_short
 					sload 5;
 					sconst_1;
 					sadd;
 					saload;
 					sstore 12;
-				L20:	getstatic_a 102;		// reference LPH_diem_danh_nv/Sha512.w_short
+				L20:	getstatic_a 104;		// reference LPH_diem_danh_nv/Sha512.w_short
 					sload 5;
 					sconst_2;
 					sadd;
 					saload;
 					sstore 13;
-				L21:	getstatic_a 102;		// reference LPH_diem_danh_nv/Sha512.w_short
+				L21:	getstatic_a 104;		// reference LPH_diem_danh_nv/Sha512.w_short
 					sload 5;
 					sconst_3;
 					sadd;
@@ -2366,23 +2413,23 @@
 					sload 17;
 					sadd;
 					sstore 7;
-					getstatic_a 102;		// reference LPH_diem_danh_nv/Sha512.w_short
+					getstatic_a 104;		// reference LPH_diem_danh_nv/Sha512.w_short
 					sload 6;
 					saload;
 					sstore 15;
-					getstatic_a 102;		// reference LPH_diem_danh_nv/Sha512.w_short
+					getstatic_a 104;		// reference LPH_diem_danh_nv/Sha512.w_short
 					sload 6;
 					sconst_1;
 					sadd;
 					saload;
 					sstore 16;
-					getstatic_a 102;		// reference LPH_diem_danh_nv/Sha512.w_short
+					getstatic_a 104;		// reference LPH_diem_danh_nv/Sha512.w_short
 					sload 6;
 					sconst_2;
 					sadd;
 					saload;
 					sstore 17;
-					getstatic_a 102;		// reference LPH_diem_danh_nv/Sha512.w_short
+					getstatic_a 104;		// reference LPH_diem_danh_nv/Sha512.w_short
 					sload 6;
 					sconst_3;
 					sadd;
@@ -2580,23 +2627,23 @@
 					sload 17;
 					sadd;
 					sstore 7;
-					getstatic_a 102;		// reference LPH_diem_danh_nv/Sha512.w_short
+					getstatic_a 104;		// reference LPH_diem_danh_nv/Sha512.w_short
 					sload 20;
 					saload;
 					sstore 11;
-					getstatic_a 102;		// reference LPH_diem_danh_nv/Sha512.w_short
+					getstatic_a 104;		// reference LPH_diem_danh_nv/Sha512.w_short
 					sload 20;
 					sconst_1;
 					sadd;
 					saload;
 					sstore 12;
-					getstatic_a 102;		// reference LPH_diem_danh_nv/Sha512.w_short
+					getstatic_a 104;		// reference LPH_diem_danh_nv/Sha512.w_short
 					sload 20;
 					sconst_2;
 					sadd;
 					saload;
 					sstore 13;
-					getstatic_a 102;		// reference LPH_diem_danh_nv/Sha512.w_short
+					getstatic_a 104;		// reference LPH_diem_danh_nv/Sha512.w_short
 					sload 20;
 					sconst_3;
 					sadd;
@@ -2678,45 +2725,45 @@
 					sload 17;
 					sadd;
 					sstore 7;
-					getstatic_a 102;		// reference LPH_diem_danh_nv/Sha512.w_short
+					getstatic_a 104;		// reference LPH_diem_danh_nv/Sha512.w_short
 					sload 20;
 					saload;
 					sstore 11;
-					getstatic_a 102;		// reference LPH_diem_danh_nv/Sha512.w_short
+					getstatic_a 104;		// reference LPH_diem_danh_nv/Sha512.w_short
 					sload 20;
 					sconst_1;
 					sadd;
 					saload;
 					sstore 12;
-					getstatic_a 102;		// reference LPH_diem_danh_nv/Sha512.w_short
+					getstatic_a 104;		// reference LPH_diem_danh_nv/Sha512.w_short
 					sload 20;
 					sconst_2;
 					sadd;
 					saload;
 					sstore 13;
-					getstatic_a 102;		// reference LPH_diem_danh_nv/Sha512.w_short
+					getstatic_a 104;		// reference LPH_diem_danh_nv/Sha512.w_short
 					sload 20;
 					sconst_3;
 					sadd;
 					saload;
 					sstore 14;
-					getstatic_a 102;		// reference LPH_diem_danh_nv/Sha512.w_short
+					getstatic_a 104;		// reference LPH_diem_danh_nv/Sha512.w_short
 					sload 20;
 					sload 7;
 					sastore;
-					getstatic_a 102;		// reference LPH_diem_danh_nv/Sha512.w_short
+					getstatic_a 104;		// reference LPH_diem_danh_nv/Sha512.w_short
 					sload 20;
 					sconst_1;
 					sadd;
 					sload 8;
 					sastore;
-					getstatic_a 102;		// reference LPH_diem_danh_nv/Sha512.w_short
+					getstatic_a 104;		// reference LPH_diem_danh_nv/Sha512.w_short
 					sload 20;
 					sconst_2;
 					sadd;
 					sload 9;
 					sastore;
-					getstatic_a 102;		// reference LPH_diem_danh_nv/Sha512.w_short
+					getstatic_a 104;		// reference LPH_diem_danh_nv/Sha512.w_short
 					sload 20;
 					sconst_3;
 					sadd;
@@ -2744,7 +2791,7 @@
 					sadd;
 					saload;
 					sstore 15;
-					getstatic_a 107;		// reference LPH_diem_danh_nv/Sha512.K_SHORT
+					getstatic_a 109;		// reference LPH_diem_danh_nv/Sha512.K_SHORT
 					sload 5;
 					sconst_3;
 					sadd;
@@ -2776,7 +2823,7 @@
 					sadd;
 					saload;
 					sstore 15;
-					getstatic_a 107;		// reference LPH_diem_danh_nv/Sha512.K_SHORT
+					getstatic_a 109;		// reference LPH_diem_danh_nv/Sha512.K_SHORT
 					sload 5;
 					sconst_2;
 					sadd;
@@ -2810,7 +2857,7 @@
 					sadd;
 					saload;
 					sstore 15;
-					getstatic_a 107;		// reference LPH_diem_danh_nv/Sha512.K_SHORT
+					getstatic_a 109;		// reference LPH_diem_danh_nv/Sha512.K_SHORT
 					sload 5;
 					sconst_1;
 					sadd;
@@ -2841,7 +2888,7 @@
 					aload_0;
 					sload 4;
 					saload;
-					getstatic_a 107;		// reference LPH_diem_danh_nv/Sha512.K_SHORT
+					getstatic_a 109;		// reference LPH_diem_danh_nv/Sha512.K_SHORT
 					sload 5;
 					saload;
 					sadd;
@@ -3922,48 +3969,48 @@
 			.locals 7;
 
 				L0:	sconst_0;
-					putstatic_s 108;		// short LPH_diem_danh_nv/Sha512.bufferOff
+					putstatic_s 110;		// short LPH_diem_danh_nv/Sha512.bufferOff
 					sspush 128;
-					putstatic_s 109;		// short LPH_diem_danh_nv/Sha512.bufferLeft
+					putstatic_s 111;		// short LPH_diem_danh_nv/Sha512.bufferLeft
 					aload_0;
 					sload_1;
-					getstatic_a 105;		// reference LPH_diem_danh_nv/Sha512.buffer
-					getstatic_s 108;		// short LPH_diem_danh_nv/Sha512.bufferOff
-					getstatic_s 109;		// short LPH_diem_danh_nv/Sha512.bufferLeft
-					invokestatic 60;		// javacard/framework/Util.arrayCopyNonAtomic([BS[BSS)S
+					getstatic_a 107;		// reference LPH_diem_danh_nv/Sha512.buffer
+					getstatic_s 110;		// short LPH_diem_danh_nv/Sha512.bufferOff
+					getstatic_s 111;		// short LPH_diem_danh_nv/Sha512.bufferLeft
+					invokestatic 62;		// javacard/framework/Util.arrayCopyNonAtomic([BS[BSS)S
 					pop;
 					sload_1;
-					getstatic_s 109;		// short LPH_diem_danh_nv/Sha512.bufferLeft
+					getstatic_s 111;		// short LPH_diem_danh_nv/Sha512.bufferLeft
 					sadd;
 					sstore_1;
 					sspush 128;
-					putstatic_s 109;		// short LPH_diem_danh_nv/Sha512.bufferLeft
+					putstatic_s 111;		// short LPH_diem_danh_nv/Sha512.bufferLeft
 					sconst_0;
-					putstatic_s 108;		// short LPH_diem_danh_nv/Sha512.bufferOff
+					putstatic_s 110;		// short LPH_diem_danh_nv/Sha512.bufferOff
 					sconst_0;
 					sstore 10;
 				L1:	sload 10;
 					bspush 32;
 					if_scmpge L3;
-				L2:	getstatic_a 104;		// reference LPH_diem_danh_nv/Sha512.hashState
+				L2:	getstatic_a 106;		// reference LPH_diem_danh_nv/Sha512.hashState
 					sload 10;
-					getstatic_a 110;		// reference LPH_diem_danh_nv/Sha512.H_INIT_SHORT
+					getstatic_a 112;		// reference LPH_diem_danh_nv/Sha512.H_INIT_SHORT
 					sload 10;
 					saload;
 					sastore;
-					getstatic_a 103;		// reference LPH_diem_danh_nv/Sha512.h_short
+					getstatic_a 105;		// reference LPH_diem_danh_nv/Sha512.h_short
 					sload 10;
-					getstatic_a 104;		// reference LPH_diem_danh_nv/Sha512.hashState
+					getstatic_a 106;		// reference LPH_diem_danh_nv/Sha512.hashState
 					sload 10;
 					saload;
 					sastore;
 					sinc 10 1;
 					goto L1;
-				L3:	getstatic_a 103;		// reference LPH_diem_danh_nv/Sha512.h_short
+				L3:	getstatic_a 105;		// reference LPH_diem_danh_nv/Sha512.h_short
 					sconst_0;
-					getstatic_a 105;		// reference LPH_diem_danh_nv/Sha512.buffer
+					getstatic_a 107;		// reference LPH_diem_danh_nv/Sha512.buffer
 					sconst_0;
-					invokestatic 111;		// LPH_diem_danh_nv/Sha512.CompressionFunction([SS[BS)V
+					invokestatic 113;		// LPH_diem_danh_nv/Sha512.CompressionFunction([SS[BS)V
 					sconst_0;
 					sstore 10;
 				L4:	sload 10;
@@ -3979,15 +4026,15 @@
 					sconst_3;
 					sadd;
 					sstore 7;
-				L8:	getstatic_a 104;		// reference LPH_diem_danh_nv/Sha512.hashState
+				L8:	getstatic_a 106;		// reference LPH_diem_danh_nv/Sha512.hashState
 					sload 7;
 					saload;
 					sstore 8;
-				L9:	getstatic_a 103;		// reference LPH_diem_danh_nv/Sha512.h_short
+				L9:	getstatic_a 105;		// reference LPH_diem_danh_nv/Sha512.h_short
 					sload 6;
 					saload;
 					sstore 9;
-				L10:	getstatic_a 104;		// reference LPH_diem_danh_nv/Sha512.hashState
+				L10:	getstatic_a 106;		// reference LPH_diem_danh_nv/Sha512.hashState
 					sload 7;
 					sload 8;
 					sload 9;
@@ -4001,7 +4048,7 @@
 					sload 8;
 					sload 9;
 					sor;
-					getstatic_a 104;		// reference LPH_diem_danh_nv/Sha512.hashState
+					getstatic_a 106;		// reference LPH_diem_danh_nv/Sha512.hashState
 					sload 7;
 					saload;
 					sconst_m1;
@@ -4015,15 +4062,15 @@
 					sstore 5;
 					sinc 6 -1;
 					sinc 7 -1;
-					getstatic_a 104;		// reference LPH_diem_danh_nv/Sha512.hashState
+					getstatic_a 106;		// reference LPH_diem_danh_nv/Sha512.hashState
 					sload 7;
 					saload;
 					sstore 8;
-					getstatic_a 103;		// reference LPH_diem_danh_nv/Sha512.h_short
+					getstatic_a 105;		// reference LPH_diem_danh_nv/Sha512.h_short
 					sload 6;
 					saload;
 					sstore 9;
-					getstatic_a 104;		// reference LPH_diem_danh_nv/Sha512.hashState
+					getstatic_a 106;		// reference LPH_diem_danh_nv/Sha512.hashState
 					sload 7;
 					sload 8;
 					sload 9;
@@ -4037,7 +4084,7 @@
 					sload 8;
 					sload 9;
 					sor;
-					getstatic_a 104;		// reference LPH_diem_danh_nv/Sha512.hashState
+					getstatic_a 106;		// reference LPH_diem_danh_nv/Sha512.hashState
 					sload 7;
 					saload;
 					sconst_m1;
@@ -4051,15 +4098,15 @@
 					sstore 5;
 					sinc 6 -1;
 					sinc 7 -1;
-					getstatic_a 104;		// reference LPH_diem_danh_nv/Sha512.hashState
+					getstatic_a 106;		// reference LPH_diem_danh_nv/Sha512.hashState
 					sload 7;
 					saload;
 					sstore 8;
-					getstatic_a 103;		// reference LPH_diem_danh_nv/Sha512.h_short
+					getstatic_a 105;		// reference LPH_diem_danh_nv/Sha512.h_short
 					sload 6;
 					saload;
 					sstore 9;
-					getstatic_a 104;		// reference LPH_diem_danh_nv/Sha512.hashState
+					getstatic_a 106;		// reference LPH_diem_danh_nv/Sha512.hashState
 					sload 7;
 					sload 8;
 					sload 9;
@@ -4073,7 +4120,7 @@
 					sload 8;
 					sload 9;
 					sor;
-					getstatic_a 104;		// reference LPH_diem_danh_nv/Sha512.hashState
+					getstatic_a 106;		// reference LPH_diem_danh_nv/Sha512.hashState
 					sload 7;
 					saload;
 					sconst_m1;
@@ -4087,15 +4134,15 @@
 					sstore 5;
 					sinc 6 -1;
 					sinc 7 -1;
-					getstatic_a 104;		// reference LPH_diem_danh_nv/Sha512.hashState
+					getstatic_a 106;		// reference LPH_diem_danh_nv/Sha512.hashState
 					sload 7;
 					saload;
 					sstore 8;
-					getstatic_a 103;		// reference LPH_diem_danh_nv/Sha512.h_short
+					getstatic_a 105;		// reference LPH_diem_danh_nv/Sha512.h_short
 					sload 6;
 					saload;
 					sstore 9;
-					getstatic_a 104;		// reference LPH_diem_danh_nv/Sha512.hashState
+					getstatic_a 106;		// reference LPH_diem_danh_nv/Sha512.hashState
 					sload 7;
 					sload 8;
 					sload 9;
@@ -4111,39 +4158,39 @@
 					sstore 10;
 				L12:	aload_0;
 					sload_1;
-					getstatic_a 105;		// reference LPH_diem_danh_nv/Sha512.buffer
-					getstatic_s 108;		// short LPH_diem_danh_nv/Sha512.bufferOff
+					getstatic_a 107;		// reference LPH_diem_danh_nv/Sha512.buffer
+					getstatic_s 110;		// short LPH_diem_danh_nv/Sha512.bufferOff
 					sload 10;
-					invokestatic 60;		// javacard/framework/Util.arrayCopyNonAtomic([BS[BSS)S
+					invokestatic 62;		// javacard/framework/Util.arrayCopyNonAtomic([BS[BSS)S
 					pop;
-					getstatic_s 109;		// short LPH_diem_danh_nv/Sha512.bufferLeft
+					getstatic_s 111;		// short LPH_diem_danh_nv/Sha512.bufferLeft
 					sload 10;
 					ssub;
-					putstatic_s 109;		// short LPH_diem_danh_nv/Sha512.bufferLeft
-					getstatic_s 108;		// short LPH_diem_danh_nv/Sha512.bufferOff
+					putstatic_s 111;		// short LPH_diem_danh_nv/Sha512.bufferLeft
+					getstatic_s 110;		// short LPH_diem_danh_nv/Sha512.bufferOff
 					sload 10;
 					sadd;
-					putstatic_s 108;		// short LPH_diem_danh_nv/Sha512.bufferOff
-					getstatic_a 105;		// reference LPH_diem_danh_nv/Sha512.buffer
-					getstatic_s 108;		// short LPH_diem_danh_nv/Sha512.bufferOff
+					putstatic_s 110;		// short LPH_diem_danh_nv/Sha512.bufferOff
+					getstatic_a 107;		// reference LPH_diem_danh_nv/Sha512.buffer
+					getstatic_s 110;		// short LPH_diem_danh_nv/Sha512.bufferOff
 					bspush -128;
 					bastore;
-					getstatic_s 109;		// short LPH_diem_danh_nv/Sha512.bufferLeft
+					getstatic_s 111;		// short LPH_diem_danh_nv/Sha512.bufferLeft
 					sconst_1;
 					ssub;
-					putstatic_s 109;		// short LPH_diem_danh_nv/Sha512.bufferLeft
-					getstatic_s 108;		// short LPH_diem_danh_nv/Sha512.bufferOff
+					putstatic_s 111;		// short LPH_diem_danh_nv/Sha512.bufferLeft
+					getstatic_s 110;		// short LPH_diem_danh_nv/Sha512.bufferOff
 					sconst_1;
 					sadd;
-					putstatic_s 108;		// short LPH_diem_danh_nv/Sha512.bufferOff
-					getstatic_a 105;		// reference LPH_diem_danh_nv/Sha512.buffer
-					getstatic_s 108;		// short LPH_diem_danh_nv/Sha512.bufferOff
-					getstatic_s 109;		// short LPH_diem_danh_nv/Sha512.bufferLeft
+					putstatic_s 110;		// short LPH_diem_danh_nv/Sha512.bufferOff
+					getstatic_a 107;		// reference LPH_diem_danh_nv/Sha512.buffer
+					getstatic_s 110;		// short LPH_diem_danh_nv/Sha512.bufferOff
+					getstatic_s 111;		// short LPH_diem_danh_nv/Sha512.bufferLeft
 					sconst_0;
-					invokestatic 88;		// javacard/framework/Util.arrayFillNonAtomic([BSSB)S
+					invokestatic 86;		// javacard/framework/Util.arrayFillNonAtomic([BSSB)S
 					pop;
-					getstatic_a 105;		// reference LPH_diem_danh_nv/Sha512.buffer
-					getstatic_a 105;		// reference LPH_diem_danh_nv/Sha512.buffer
+					getstatic_a 107;		// reference LPH_diem_danh_nv/Sha512.buffer
+					getstatic_a 107;		// reference LPH_diem_danh_nv/Sha512.buffer
 					arraylength;
 					sconst_2;
 					ssub;
@@ -4156,8 +4203,8 @@
 					sand;
 					s2b;
 					bastore;
-					getstatic_a 105;		// reference LPH_diem_danh_nv/Sha512.buffer
-					getstatic_a 105;		// reference LPH_diem_danh_nv/Sha512.buffer
+					getstatic_a 107;		// reference LPH_diem_danh_nv/Sha512.buffer
+					getstatic_a 107;		// reference LPH_diem_danh_nv/Sha512.buffer
 					arraylength;
 					sconst_1;
 					ssub;
@@ -4173,19 +4220,19 @@
 				L13:	sload 11;
 					bspush 32;
 					if_scmpge L15;
-				L14:	getstatic_a 103;		// reference LPH_diem_danh_nv/Sha512.h_short
+				L14:	getstatic_a 105;		// reference LPH_diem_danh_nv/Sha512.h_short
 					sload 11;
-					getstatic_a 104;		// reference LPH_diem_danh_nv/Sha512.hashState
+					getstatic_a 106;		// reference LPH_diem_danh_nv/Sha512.hashState
 					sload 11;
 					saload;
 					sastore;
 					sinc 11 1;
 					goto L13;
-				L15:	getstatic_a 103;		// reference LPH_diem_danh_nv/Sha512.h_short
+				L15:	getstatic_a 105;		// reference LPH_diem_danh_nv/Sha512.h_short
 					sconst_0;
-					getstatic_a 105;		// reference LPH_diem_danh_nv/Sha512.buffer
+					getstatic_a 107;		// reference LPH_diem_danh_nv/Sha512.buffer
 					sconst_0;
-					invokestatic 111;		// LPH_diem_danh_nv/Sha512.CompressionFunction([SS[BS)V
+					invokestatic 113;		// LPH_diem_danh_nv/Sha512.CompressionFunction([SS[BS)V
 					sconst_0;
 					sstore 11;
 				L16:	sload 11;
@@ -4201,15 +4248,15 @@
 					sconst_3;
 					sadd;
 					sstore 7;
-				L20:	getstatic_a 104;		// reference LPH_diem_danh_nv/Sha512.hashState
+				L20:	getstatic_a 106;		// reference LPH_diem_danh_nv/Sha512.hashState
 					sload 7;
 					saload;
 					sstore 8;
-				L21:	getstatic_a 103;		// reference LPH_diem_danh_nv/Sha512.h_short
+				L21:	getstatic_a 105;		// reference LPH_diem_danh_nv/Sha512.h_short
 					sload 6;
 					saload;
 					sstore 9;
-				L22:	getstatic_a 104;		// reference LPH_diem_danh_nv/Sha512.hashState
+				L22:	getstatic_a 106;		// reference LPH_diem_danh_nv/Sha512.hashState
 					sload 7;
 					sload 8;
 					sload 9;
@@ -4223,7 +4270,7 @@
 					sload 8;
 					sload 9;
 					sor;
-					getstatic_a 104;		// reference LPH_diem_danh_nv/Sha512.hashState
+					getstatic_a 106;		// reference LPH_diem_danh_nv/Sha512.hashState
 					sload 7;
 					saload;
 					sconst_m1;
@@ -4237,15 +4284,15 @@
 					sstore 5;
 					sinc 6 -1;
 					sinc 7 -1;
-					getstatic_a 104;		// reference LPH_diem_danh_nv/Sha512.hashState
+					getstatic_a 106;		// reference LPH_diem_danh_nv/Sha512.hashState
 					sload 7;
 					saload;
 					sstore 8;
-					getstatic_a 103;		// reference LPH_diem_danh_nv/Sha512.h_short
+					getstatic_a 105;		// reference LPH_diem_danh_nv/Sha512.h_short
 					sload 6;
 					saload;
 					sstore 9;
-					getstatic_a 104;		// reference LPH_diem_danh_nv/Sha512.hashState
+					getstatic_a 106;		// reference LPH_diem_danh_nv/Sha512.hashState
 					sload 7;
 					sload 8;
 					sload 9;
@@ -4259,7 +4306,7 @@
 					sload 8;
 					sload 9;
 					sor;
-					getstatic_a 104;		// reference LPH_diem_danh_nv/Sha512.hashState
+					getstatic_a 106;		// reference LPH_diem_danh_nv/Sha512.hashState
 					sload 7;
 					saload;
 					sconst_m1;
@@ -4273,15 +4320,15 @@
 					sstore 5;
 					sinc 6 -1;
 					sinc 7 -1;
-					getstatic_a 104;		// reference LPH_diem_danh_nv/Sha512.hashState
+					getstatic_a 106;		// reference LPH_diem_danh_nv/Sha512.hashState
 					sload 7;
 					saload;
 					sstore 8;
-					getstatic_a 103;		// reference LPH_diem_danh_nv/Sha512.h_short
+					getstatic_a 105;		// reference LPH_diem_danh_nv/Sha512.h_short
 					sload 6;
 					saload;
 					sstore 9;
-					getstatic_a 104;		// reference LPH_diem_danh_nv/Sha512.hashState
+					getstatic_a 106;		// reference LPH_diem_danh_nv/Sha512.hashState
 					sload 7;
 					sload 8;
 					sload 9;
@@ -4295,7 +4342,7 @@
 					sload 8;
 					sload 9;
 					sor;
-					getstatic_a 104;		// reference LPH_diem_danh_nv/Sha512.hashState
+					getstatic_a 106;		// reference LPH_diem_danh_nv/Sha512.hashState
 					sload 7;
 					saload;
 					sconst_m1;
@@ -4309,15 +4356,15 @@
 					sstore 5;
 					sinc 6 -1;
 					sinc 7 -1;
-					getstatic_a 104;		// reference LPH_diem_danh_nv/Sha512.hashState
+					getstatic_a 106;		// reference LPH_diem_danh_nv/Sha512.hashState
 					sload 7;
 					saload;
 					sstore 8;
-					getstatic_a 103;		// reference LPH_diem_danh_nv/Sha512.h_short
+					getstatic_a 105;		// reference LPH_diem_danh_nv/Sha512.h_short
 					sload 6;
 					saload;
 					sstore 9;
-					getstatic_a 104;		// reference LPH_diem_danh_nv/Sha512.hashState
+					getstatic_a 106;		// reference LPH_diem_danh_nv/Sha512.hashState
 					sload 7;
 					sload 8;
 					sload 9;
@@ -4334,7 +4381,7 @@
 					if_scmpge L26;
 				L25:	aload_3;
 					sload 4;
-					getstatic_a 104;		// reference LPH_diem_danh_nv/Sha512.hashState
+					getstatic_a 106;		// reference LPH_diem_danh_nv/Sha512.hashState
 					sload 11;
 					saload;
 					bspush 8;
@@ -4346,7 +4393,7 @@
 					sinc 4 1;
 					aload_3;
 					sload 4;
-					getstatic_a 104;		// reference LPH_diem_danh_nv/Sha512.hashState
+					getstatic_a 106;		// reference LPH_diem_danh_nv/Sha512.hashState
 					sload 11;
 					saload;
 					sspush 255;

@@ -41,7 +41,8 @@ public class LPH_diem_danh_nv extends Applet
 	public static byte lenPHONE= (byte)0;
 	
 	public static byte[] OpImage,size;
-	
+	private short imageLen = 0;
+	private short pointerImage = 0;
 	
 	// Maximum number of keys handled by the Cardlet
 	private final static byte MAX_NUM_KEYS = (byte) 16;
@@ -502,12 +503,18 @@ public class LPH_diem_danh_nv extends Applet
 		apdu.setIncomingAndReceive();
 		short p1 = (short)(buffer[ISO7816.OFFSET_P1]&0xff);
 		short count = (short)(249 * p1);
-		 // Mã hóa tng phn d liu trc khi lu vào OpImage
+		
+		
+		 // Mã hóa tng phn d liu nh trc khi lu vào OpImage
 		//byte[] temp = new byte[249];
 		//Util.arrayCopy(buffer, ISO7816.OFFSET_CDATA, temp, (short) 0, (short) 249);
-		//byte[] encryptedData = encrypt(temp);
-		//Util.arrayCopy(encryptedData, (short) 0, OpImage, count, (short) 249);
-		Util.arrayCopy(buffer, ISO7816.OFFSET_CDATA, OpImage, count, (short)249);
+		//byte[] encryptedData = encrypt(temp); 
+		if ((count + 249) > OpImage.length) {
+			ISOException.throwIt(ISO7816.SW_WRONG_LENGTH);
+		}
+
+		Util.arrayCopy(buffer, ISO7816.OFFSET_CDATA, OpImage, count, (short) 249);
+		imageLen = (short) (count + 249);
 	}
 	private void SetCount(APDU apdu, byte[] buffer){
 		apdu.setIncomingAndReceive();
@@ -523,16 +530,22 @@ public class LPH_diem_danh_nv extends Applet
 	private void OututImage(APDU apdu, byte[] buffer){
 		apdu.setIncomingAndReceive();
 		apdu.setOutgoing();
-		short p = (short)(buffer[ISO7816.OFFSET_P1]&0xff);
-		short count = (short)(249 * p);
+		short p1 = (short)(buffer[ISO7816.OFFSET_P1]&0xff);
+		short count = (short)(249 * p1);
 		
-		// Gii mã d liu t OpImage trc khi gi
+		
+		 // Gii mã d liu nh trong OpImage trc khi gi
 		//byte[] temp = new byte[249];
 		//Util.arrayCopy(OpImage, count, temp, (short) 0, (short) 249);
-		//byte[] decryptedData = decrypt(temp, (byte) 249);
+		//byte[] decryptedData = decrypt(temp, (byte) 249); // Gii mã d liu nh
 
-		apdu.setOutgoingLength((short)249);
-		apdu.sendBytesLong(OpImage, count, (short)249);
+		if (count >= imageLen) {
+			ISOException.throwIt(ISO7816.SW_WRONG_LENGTH);
+		}
+
+		short length = (short) ((imageLen - count) > 249 ? 249 : (imageLen - count));
+		apdu.setOutgoingLength(length);
+		apdu.sendBytesLong(OpImage, count, length);
 	}
 	/*CHECK PIN POLICY*/
 	private boolean CheckPINPolicy(byte[] pin_buffer, short pin_offset, byte pin_size) {
@@ -607,4 +620,65 @@ public class LPH_diem_danh_nv extends Applet
     	}
         
     }
+    
+    /**Encrypt image*/
+	/** private byte[] encrypt(byte[] encryptData) {
+    aesCipher.init(aesKey, Cipher.MODE_ENCRYPT);
+
+    // Tính toán padding cn thit
+    short blockSize = (short) 16; // Kích thc khi AES (128 bit)
+    short dataLength = (short) encryptData.length;
+    short paddedLength = (short) ((dataLength + blockSize - 1) / blockSize * blockSize);
+
+    // To mng có padding
+    byte[] temp = new byte[paddedLength];
+    Util.arrayCopy(encryptData, (short) 0, temp, (short) 0, dataLength);
+
+    // Thêm padding kiu PKCS#7
+    byte paddingValue = (byte) (paddedLength - dataLength);
+    for (short i = dataLength; i < paddedLength; i++) {
+        temp[i] = paddingValue;
+    }
+
+    // Mng cha d liu mã hóa
+    byte[] dataEncrypted;
+    try {
+        dataEncrypted = JCSystem.makeTransientByteArray(paddedLength, JCSystem.CLEAR_ON_DESELECT);
+    } catch (SystemException e) {
+        dataEncrypted = new byte[paddedLength];
+    }
+
+    // Mã hóa d liu
+    aesCipher.doFinal(temp, (short) 0, paddedLength, dataEncrypted, (short) 0x00);
+    return dataEncrypted;
+}
+**/
+
+    /**Decrypt image*/
+    /** private byte[] decrypt(byte[] decryptData, byte length) {
+    if (length > (short) 0) {
+        aesCipher.init(aesKey, Cipher.MODE_DECRYPT);
+
+        // To mng cha d liu gii mã
+        byte[] dataDecrypted;
+        try {
+            dataDecrypted = JCSystem.makeTransientByteArray((short) decryptData.length, JCSystem.CLEAR_ON_DESELECT);
+        } catch (SystemException e) {
+            dataDecrypted = new byte[(short) decryptData.length];
+        }
+
+        // Gii mã d liu
+        aesCipher.doFinal(decryptData, (short) 0, (short) decryptData.length, dataDecrypted, (short) 0x00);
+
+        // Loi b padding
+        byte paddingValue = dataDecrypted[(short) (dataDecrypted.length - 1)];
+        short originalLength = (short) (dataDecrypted.length - paddingValue);
+        byte[] result = new byte[originalLength];
+        Util.arrayCopy(dataDecrypted, (short) 0, result, (short) 0, originalLength);
+        return result;
+    } else {
+        // Nu  dài bng 0, tr v mng rng
+        return new byte[1];
+    }
+}**/
 }

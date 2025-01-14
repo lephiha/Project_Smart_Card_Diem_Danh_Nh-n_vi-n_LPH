@@ -7,6 +7,8 @@ package cham_cong_nv_lph;
 
 import javacard.connect.ConnectCard;
 import java.awt.Color;
+import java.awt.Graphics2D;
+import java.awt.Image;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.image.BufferedImage;
@@ -27,6 +29,7 @@ import java.util.logging.Logger;
 import javacard.connect.RSAAppletHelper;
 import javacard.utils.RSAData;
 import javacard.utils.RandomUtil;
+import javax.imageio.ImageIO;
 import javax.smartcardio.CardException;
 import javax.swing.ImageIcon;
 import javax.swing.JFileChooser;
@@ -984,15 +987,43 @@ public class HomeForm extends javax.swing.JFrame {
         File file = jfc.getSelectedFile();
 
         if (file != null) {
+            try {
             if (file.length() > 10000) {
-                JOptionPane.showMessageDialog(null, "Kích thước quá lớn. Vui lòng chọn ảnh khác!");
-                return;
+                // Nén lại ảnh nếu kích thước lớn
+                BufferedImage originalImage = ImageIO.read(file);
+                int targetWidth = 300; 
+                int targetHeight = 300; 
+
+                // Thay đổi kích thước ảnh
+                Image resizedImage = originalImage.getScaledInstance(targetWidth, targetHeight, Image.SCALE_SMOOTH);
+                BufferedImage resizedBufferedImage = new BufferedImage(targetWidth, targetHeight, BufferedImage.TYPE_INT_RGB);
+                Graphics2D g2d = resizedBufferedImage.createGraphics();
+                g2d.drawImage(resizedImage, 0, 0, null);
+                g2d.dispose();
+
+                // Lưu lại ảnh nén tạm thời
+                File tempFile = new File("resized_image.jpg");
+                ImageIO.write(resizedBufferedImage, "jpg", tempFile);
+
+                // Hiển thị giao diện xem trước với ảnh nén
+                ReviewAvatarUI avatarUI = new ReviewAvatarUI(tempFile, this);
+                avatarUI.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+                avatarUI.setLocationRelativeTo(null);
+                avatarUI.setVisible(true);
             }
-            ReviewAvatarUI avatarUI = new ReviewAvatarUI(file, this);
-            avatarUI.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-            avatarUI.setLocationRelativeTo(null);
-            avatarUI.setVisible(true);
+            else {
+                // Hiển thị giao diện xem trước với ảnh gốc
+                ReviewAvatarUI avatarUI = new ReviewAvatarUI(file, this);
+                avatarUI.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+                avatarUI.setLocationRelativeTo(null);
+                avatarUI.setVisible(true);
+                
+            }
         }
+        catch (IOException ex) {
+            JOptionPane.showMessageDialog(null, "Lỗi xử lý ảnh: " + ex.getMessage());
+        }
+    }
 
     }//GEN-LAST:event_jButton5ActionPerformed
 

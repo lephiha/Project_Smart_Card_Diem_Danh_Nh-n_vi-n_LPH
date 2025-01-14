@@ -16,6 +16,7 @@ import java.util.List;
 import javax.smartcardio.*;
 import java.io.ByteArrayOutputStream;
 import java.io.File;
+import java.nio.ByteBuffer;
 import java.nio.charset.StandardCharsets;
 import java.util.Arrays;
 import javacard.define.APPLET;
@@ -367,38 +368,33 @@ public class ConnectCard {
             ByteArrayOutputStream bos = new ByteArrayOutputStream();
             ImageIO.write(bImage, type, bos);
             
-            byte[] napanh = bos.toByteArray();
+            byte[] imageData = bos.toByteArray();
+            int totalChunks = imageData.length/249;
+            int lastChunkSize = imageData.length % 249;
             
-            int soLan = napanh.length / 249;
-            
-            String strsend = soLan + "S" + napanh.length % 249;
-            
-            byte[] send = strsend.getBytes();
-            
-            ResponseAPDU response = channel.transmit(new CommandAPDU(0xB0,APPLET.INS_CREATE_SIZEIMAGE,0x00,0x01,send));
+           
+                // Gửi kích thước ảnh cho Applet
+            byte[] sizeInfo = ByteBuffer.allocate(4).putInt(imageData.length).array();
+            ResponseAPDU response = channel.transmit(new CommandAPDU(0xB0, APPLET.INS_CREATE_SIZEIMAGE, 0x00, 0x00, sizeInfo));
+
             String check = Integer.toHexString(response.getSW());
             
             if(check.equals(RESPONS.SW_NO_ERROR)){
-                for(int i = 0;i<=soLan ;i++){
-                    byte p1 = (byte) i;
-                    int start = 0, end = 0;
-                    start = i * 249;
-                    if(i != soLan){
-                        end = (i+1) *249;
-                    }
-                    else{
-                        end = napanh.length;
-                    }
-                    byte[] slice = Arrays.copyOfRange(napanh, start, end);
-                    response = channel.transmit(new CommandAPDU(0xB0,APPLET.INS_CREATE_IMAGE,p1,0x01,slice));
-                    String checkSlide = Integer.toHexString(response.getSW());
-                    if(!checkSlide.equals(RESPONS.SW_NO_ERROR)){
+                for(int i = 0;i<= totalChunks;i++){
+                    int chunkSize = (i == totalChunks) ? lastChunkSize : 249;
+                    byte[] chunk = Arrays.copyOfRange(imageData, i * 249, i * 249 + chunkSize);
+
+                    response = channel.transmit(new CommandAPDU(0xB0, APPLET.INS_CREATE_IMAGE, i, 0x00, chunk));
+                    String checkChunk = Integer.toHexString(response.getSW());
+                    
+                    if (!checkChunk.equals(RESPONS.SW_NO_ERROR)){
                         return false;
                     }
+          
                 }
                 return true;
             }
-            return true;
+            return false;
         }
         catch(Exception ex){
             return false;
@@ -417,44 +413,31 @@ public class ConnectCard {
             
             CardChannel channelImage = card.getBasicChannel();
             
-            int size = 0;
-            ResponseAPDU answer = channelImage.transmit(new CommandAPDU(0xB0,APPLET.INS_OUT_SIZEIMAGE,0x01,0x01));
-            String check = Integer.toHexString(answer.getSW());
+            // Lấy kích thước ảnh từ Applet
+            ResponseAPDU response = channel.transmit(new CommandAPDU(0xB0, APPLET.INS_OUT_SIZEIMAGE, 0x00, 0x00));
+            String check = Integer.toHexString(response.getSW());
             if(check.equals(RESPONS.SW_NO_ERROR)){
-                byte[] sizeAnh = answer.getData();
-                if(ConvertData.isByteArrayAllZero(sizeAnh)){
-                    return null;
-                }
-                byte[] arrAnh = new byte[10000];
-                String strSizeAnh = new String(sizeAnh);
-                String[] outPut1 = strSizeAnh.split("S");
+                byte[] sizeInfo = response.getData();
+                int imageSize = ByteBuffer.wrap(sizeInfo).getInt();
+
+                byte[] imageData = new byte[imageSize];
+                int totalChunks = imageSize / 249;
+                int lastChunkSize = imageSize % 249;
                 
-                int lan = Integer.parseInt(outPut1[0].replaceAll("\\D", ""));
-                int du = Integer.parseInt(outPut1[1].replaceAll("\\D", ""));
-                size = lan * 249 + du;
-                int count = size / 249;
-                System.err.println(count);
-                for(int j=0;j<=count;j++){
-                    answer = channelImage.transmit(new CommandAPDU(0xB0,APPLET.INS_OUT_IMAGE,(byte)j,0x01));
-                    String check1 = Integer.toHexString(answer.getSW());
-                    if(check1.equals(RESPONS.SW_NO_ERROR)){
-                        byte[] result = answer.getData();
-                        int leng = 249;
-                        if(j == count){
-                            leng = size % 249;
-                        }
-                        System.arraycopy(result, 0, arrAnh, j*249, leng);
+                 // Nhận từng gói dữ liệu từ Applet
+                for (int i = 0; i <= totalChunks; i++) {
+                    response = channel.transmit(new CommandAPDU(0xB0, APPLET.INS_OUT_IMAGE, i, 0x00));
+                    String checkChunk = Integer.toHexString(response.getSW());
+                    if (checkChunk.equals(RESPONS.SW_NO_ERROR)) {
+                        int chunkSize = (i == totalChunks) ? lastChunkSize : 249;
+                        byte[] chunk = response.getData();
+                        System.arraycopy(chunk, 0, imageData, i * 249, chunkSize);
                     }
                 }
-                
-                ByteArrayInputStream bais = new ByteArrayInputStream(arrAnh);
-                try {
-                    BufferedImage image  = ImageIO.read(bais);
-                    return image;
-                } catch (Exception e) {
-                    System.err.println("Error image");
-                }
-            }
+                // Chuyển dữ liệu thành ảnh
+                ByteArrayInputStream bais = new ByteArrayInputStream(imageData);
+                return ImageIO.read(bais);
+           }
         } catch (Exception e) {
             System.err.println("error dowloadimage");
         }

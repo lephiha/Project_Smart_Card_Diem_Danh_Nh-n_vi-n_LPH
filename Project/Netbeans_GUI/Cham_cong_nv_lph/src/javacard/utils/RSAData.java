@@ -94,7 +94,7 @@ public class RSAData {
         // Câu lệnh SQL để lấy PublicKey
         String sql = "SELECT public_key FROM rsa_keys WHERE key_name = ?";
         pstmt = conn.prepareStatement(sql);
-        pstmt.setString(1, "default_key"); // Tên cụ thể cho key
+        pstmt.setString(1, "default_key"); 
 
         // Thực thi câu lệnh
         rs = pstmt.executeQuery();
